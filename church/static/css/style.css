@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
+}
+p{
+    font-family: 'TT Firs Neue Thin';
+    font-size: 16px;
+}
+h1, h2, h3, h4 {
+    font-family: 'TT Firs Neue Light'
+}
+
+
+/* .navBar{
+    padding-bottom: 20px;
+} */
+
+
+.logo-nav-elements{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-color: #ffffff;
+    font-family: 'TT Firs Neue Thin';
+    box-shadow: 2px 5px 8px rgb(106, 124, 124);
+}
+
+.logo img{
+    width:300px;
+    height:150px;
+}
+
+.navigation{
+    visibility: visible;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.church-name{
+    color: rgb(0, 13, 41);
+    font-style: oblique;
+    font-size: 20px;
+    margin: 20px;
+    line-height: 30px;
+}
+
+.hero-banner{
+    background: url(/static/img/temple.jpeg) no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: center;
+    background-position: center;
+}
+
+.hero-banner p{
+    color: azure;
+    display: flex;
+    align-items: center;
+    position: center;
+    background-position: center;
+    padding-bottom: 12px;
+}
+
+.hero-banner-comps{
+    display: grid;
+    grid-template-columns: repeat(auto-fill(400px, 1fr));
+    grid-template-rows: 1fr;
+    padding: 20px;
+    margin:0 100px;
+    transition: 1s all ease-in;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.hero-banner-comps a{
+    text-decoration: none;
+    color: rgb(250, 242, 242);
+    font-size: small;
+}
+
+.hero-banner-comps a:hover {
+    background-color: #c5e3e8;
+    transition:200ms;
+}
+
+.nav-elements{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #d1d1d1d3;
+}
+
+.nav-elements a {
+    text-decoration: none;
+    color: black;
+    padding:5px 20px;
+    font-family: 'TT Firs Neue Light';
+    font-size: 14px;
+}
+
+.nav-ele2 {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    padding: 8px 20px;
+}
+
+.nav-ele2 a{
+    background-color: #b5061f;
+    border-radius: 15px;
+    padding: 5px 20px;
+    color: white;
+}
+
+.nav-elements a:hover{
+    border-radius: 5px;
+    border: 1px solid rgb(255, 180, 130);
+    transition: 1s;
+}
+
+.nav-menu-items {
+    display: block;
+    justify-content: flex-start;
+}
+
+.breadcrumb {
+    display: none;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+}
+
+#main-body{
+    margin: 10px 30px;
+    padding: 10px;
+    background-color: rgb(242, 248, 248);
+}
+
+.main-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+.about-text-side{
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+
+.about-text-side h1{
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #44a2bc;
+}
+
+.about-image-side{
+    background: linear-gradient(to right, rgba(235, 224, 224, 0.719), rgba(212, 176, 176, 0.932)), url(/static/img/prayerfulsmile.jpg) no-repeat center center;
+    padding: 0 5px;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.about-image-side p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: 'TT Firs Neue Thin';
+    padding: 10px;
+}
+
+.about-text-side p{
+    margin-bottom: 20px;
+    font-family: "TT Firs Neue Thin";
+    font-size: 16px;
+    line-height: 6mm;
+}
+
+.about-text-side a{
+    background-color:#ff0000;
+    padding:8px 15px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+.about-text-side a:hover{
+    border: 5px rgb(21, 250, 181) solid;
+    transition: 2s;
+    transform: scale(1.5);
+    margin: 8px;
+}
+
+.fade-in{
+    opacity: 0;
+    tansition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+@media screen and (max-width:600px){
+    .fade-in.appear {
+        opacity: 1;
+        transition: all 1s;
+    }
+    .nav-elements{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: #01305B;
+        padding: 20px 0;
+        margin: 0;
+    }
+    .navigation {
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: #faf4f8;
+        height: 60%;
+        width: 80%;
+        z-index: 1;
+        background-position: left;
+        position: absolute;
+    }
+
+    .nav-elements a{
+        margin: 5px 20px;
+        width: 50%;
+        height:max-content;
+        color: #eefdfb;
+    }
+
+
+
+    .logo-nav-elements {
+        height: min-content;
+        display: block;
+        padding: 0px;
+    }
+
+    .breadcrumb {
+        visibility: visible;
+        width: 35px;
+        height: 30px;
+        display:block;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #00ffd52a;
+        padding: 2px;
+    }
+    .nav-menu-items{
+        display: block;
+        justify-content: left;
+        align-items: flex-start;
+        margin: 0;
+        padding: 5px;
+    }
+    .church-name {
+        text-align: center;
+    }
+    .hero-banner {
+        background-size: cover;
+    }
+    .hero-banner-comps{
+        padding: 5px;
+    }
+    .main-items{
+        display: block;
+        justify-content: flex-start;
+        align-items: left;
+        background-position: left;
+        margin: 0;
+        padding: 0;
+    }
+    #main-body{
+        margin: 5px;
+        padding: 5px;
+    }
+    .hero-banner-comps {
+        margin: auto;
+    }
+}
+
+.images-comps{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: 1s all ease-in-out;
+}
+
+.images-comps img{
+    height: 20rem;
+    width: 30rem;
+}
+
+.image-gallery{
+    margin-top: 30px;
+}
+
+.image-gallery h1{
+    margin: 20px 0;
+    font-size: 20px;
+    color: #44a2bc;
+}
+
+.main-events-section{
+    margin-top:30px;
+    padding-bottom: 30px;
+}
+.main-events-section h1 {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #44a2bc;
+}
+
+.upcoming-events-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.main-upcoming-events{
+    border-right: 3px solid rgb(35, 169, 202);
+    display: grid;
+    border-radius: 5px;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(250, 246, 242, 0.767);
+    border: 1px solid rgb(179, 167, 167);
+    height: 40vh;
+}
+
+.main-upcoming-events:hover {
+    background:linear-gradient(to right, rgba(255, 141, 236, 0.932), #ccfff6);
+}
+.main-upcoming-events:first-child{
+    background:linear-gradient(to right, #a5b2f3, rgba(218, 252, 225, 0.938));
+}
+
+.main-upcoming-events .date{
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.5mm;
+    padding: 5px;
+}
+
+.main-upcoming-events .venue{
+    color: #040505;
+    font-size: 20px;
+    padding: 5px;
+}
+.venue h3{
+    font-size: 16px;
+}
+
+/* Footer */
+
+.footer-area{
+    width: 100%;
+    background-color: #01305B;
+    padding: 20px;
+    color: white;
+    /* border:#c5011b 2px solid; */
+}
+
+.footer-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer{
+    margin-bottom: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 30px;
+    color: #c3e5e8;
+}
+
+@media screen and (max-width:600px) {
+    .images-comps {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        gap: 5px;
+    }
+    .images-comps img {
+        height: 20rem;
+        width: 100%;
+    }
+    .upcoming-events-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+
+    .footer-items {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 24px;
+        font-family: "TT Firs Neue Light";
+    }
+    p{
+        font-family: "TT Firs Neue thin";
+        font-size: 12px;
+    }
+    .home{
+        margin: 10px 12rem;
+        animation: fade linear infinite;
+        
+    }
+    .home2{
+        
+        margin: 10px 12rem 10px 0;
+    }
+    .home3{
+        margin: 10px 0 10px 12rem;
+
+    }
+    .main{
+        margin: 10px;
+        padding: 10px;
+    }
+    .home::before{
+        content: "";
+        margin: 10px 12rem 10px 0;
+    }
+    .home::after{
+        margin: 10px 0 10px 12rem;
+    }
+    @keyframes fade{
+        0% {
+            transform: rotateX(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+
+    }
+</style>
+<body>
+    <section class="main">
+        <div class="home">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input style="padding: 5px 20px; background-color: aquamarine; " type="submit" value="Send" name="submit">
+            </form>
+            <h4>Total price for the items is: ${{ total }} </h4>
+            <h1>Good to have you around</h1>
+            <ul style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: 1fr; gap: 10px; border-bottom: 2px dotted black;">
+                {% for item in fruits_model %}
+                <div>
+                    <p>{{ item.name }}</p>
+                    <p>${{ item.price }}</p>  
+                </div>
+                
+                
+                {% endfor %}
+            </ul>
+            <p>This is a bit about us</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi qui nemo officia hic et possimus assumenda facere non optio ullam laudantium unde, quod aliquid ea earum esse veniam sit voluptas illum atque alias. Perspiciatis, sint nemo unde consectetur minima adipisci, eius praesentium voluptatem, suscipit laboriosam veniam? Deserunt culpa reprehenderit ipsam beatae, sit molestiae accusantium impedit quas fugit non sapiente temporibus veritatis nostrum pariatur! Suscipit deleniti quae quis quo maxime. Vel ipsa neque ab molestias culpa quos aliquam repellendus provident ratione, eligendi consequatur. Cumque amet deleniti rerum totam esse consectetur ex sint saepe, voluptates nam aliquid nesciunt dolorum impedit, quidem tempore earum fuga ab! Tenetur nisi corporis natus beatae inventore vel, eius, voluptatem eveniet impedit repudiandae itaque quisquam? Mollitia, dolorem.</p>        
+        </div>
+        <div class="home2">
+            <h1>Good to have you around</h1>
+
+            <p>This is a bit about us</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi qui nemo officia hic et possimus assumenda facere non optio ullam laudantium unde, quod aliquid ea earum esse veniam sit voluptas illum atque alias. Perspiciatis, sint nemo unde consectetur minima adipisci, eius praesentium voluptatem, suscipit laboriosam veniam? Deserunt culpa reprehenderit ipsam beatae, sit molestiae accusantium impedit quas fugit non sapiente temporibus veritatis nostrum pariatur! Suscipit deleniti quae quis quo maxime. Vel ipsa neque ab molestias culpa quos aliquam repellendus provident ratione, eligendi consequatur. Cumque amet deleniti rerum totam esse consectetur ex sint saepe, voluptates nam aliquid nesciunt dolorum impedit, quidem tempore earum fuga ab! Tenetur nisi corporis natus beatae inventore vel, eius, voluptatem eveniet impedit repudiandae itaque quisquam? Mollitia, dolorem.</p>        
+        </div>
+        <div class="home3">
+            <h1>Good to have you around</h1>
+
+            <p>This is a bit about us</p><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi qui nemo officia hic et possimus assumenda facere non optio ullam laudantium unde, quod aliquid ea earum esse veniam sit voluptas illum atque alias. Perspiciatis, sint nemo unde consectetur minima adipisci, eius praesentium voluptatem, suscipit laboriosam veniam? Deserunt culpa reprehenderit ipsam beatae, sit molestiae accusantium impedit quas fugit non sapiente temporibus veritatis nostrum pariatur! Suscipit deleniti quae quis quo maxime. Vel ipsa neque ab molestias culpa quos aliquam repellendus provident ratione, eligendi consequatur. Cumque amet deleniti rerum totam esse consectetur ex sint saepe, voluptates nam aliquid nesciunt dolorum impedit, quidem tempore earum fuga ab! Tenetur nisi corporis natus beatae inventore vel, eius, voluptatem eveniet impedit repudiandae itaque quisquam? Mollitia, dolorem.</p>        
+        </div>        
+    </section>
+
+
+</body>
+</html>

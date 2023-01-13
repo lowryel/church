@@ -1,0 +1,108 @@
+{% extends 'index.html' %}
+{% load static %}
+
+    {% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <style>
+        #id_fullname{
+            width: 100%;
+            height: 30px;
+        }
+        #id_email, #id_phone{
+            width: 100%;
+            height: 30px;
+        }
+        #id_message{
+            width: 100%;
+        }
+    </style>
+        <main class="know-about-us">
+            <section class="about-us">
+                <div class="about-content">
+                    <h1 style="font-size: 24px;">Meet Our Leaders</h1>
+                    <div class="our-leaders">
+                        <div class="our-leaders-indiv fade-in">
+                           <img src="{% static './img/beautiful worship.jpg' %}" alt="our leaders">
+                           <p for="img">REVEREND EASTMAN</p>
+                        </div>
+                        <div class="our-leaders-indiv fade-in">
+                            <img src="{% static './img/prayerfulsmile.jpg' %}" alt="our leaders">
+                            <p for="img">REV PASTOR WEST</p>
+                        </div>
+                        <div class="our-leaders-indiv fade-in">
+                            <img src="{% static './img/beautiful worship.jpg' %}" alt="our leaders">
+                            <p for="img">PASTOR WEST</p>
+                        </div>
+                        <div class="our-leaders-indiv fade-in">
+                            <img src="{% static './img/prayerfulsmile.jpg' %}" alt="our leaders">
+                            <p for="img">ELDER NORTH</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-left-text-area">
+                        <h1 style="font-size: 24px;">Attributes we Possess</h1>
+                        <div class="about-links">
+                            <a href="#vision">Our Vision</a>
+                            <a href="#mission">Our Mission</a>
+                            <a href="#church">Our Church</a>
+                            <a href="#values">Our Values</a> 
+                        </div>                 
+                    </div>
+
+                    <div class="about-right-text-area">
+                        <div id="vision" class="ambitions fade-in">
+                            <h3>Our Vision</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, ea aut quas vel, repellat incidunt est commodi rerum dolore nesciunt facilis. Facilis magni ratione incidunt quia quam adipisci natus dolor! Iste distinctio eos perferendis quod facere modi quidem, ipsam vitae et, rerum non! Reiciendis repellat impedit provident numquam dignissimos dicta ipsam dolores sapiente, unde, repellendus id aliquid libero? Nisi enim at quam ut, maxime quis consectetur atque non quia ex omnis modi error sapiente praesentium aliquam saepe perferendis beatae eligendi.</p>
+                        </div>
+                        <div class="ambitions fade-in" id="mission">
+                            <h3>Our Mision</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos tenetur sint expedita voluptatibus rem cupiditate, rerum quidem eveniet adipisci nam eum aspernatur odio officia ullam. Nemo repellendus dolorem omnis autem sed quam corporis velit corrupti repellat, quas dicta vero provident vitae aperiam, magnam ut. Ex sapiente perspiciatis reprehenderit exercitationem facere nostrum est id incidunt, alias dolorum dolores soluta. Explicabo natus ad numquam ipsam deleniti velit necessitatibus sunt inventore, veritatis voluptatum nemo ipsa unde esse tempora! Ducimus iure minus omnis?</p>
+                        </div>
+                        <div class="ambitions fade-in lozad" id="church">
+                            <h3>Our Church</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis voluptatibus et illo deserunt. Quas architecto harum accusamus officia. Rem sint beatae veritatis. Voluptatum nostrum quisquam non id deserunt ratione repellat, quam dolor aut animi! Nihil, ipsum omnis minima illo cum autem neque asperiores nulla voluptates blanditiis unde sit consequatur obcaecati cumque excepturi repudiandae ad et exercitationem eius culpa enim.</p>
+                        </div>
+                        <div class="ambitions fade-in lozad" id="values">
+                            <h3>Our Values</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis voluptatibus et illo deserunt. Quas architecto harum accusamus officia. Rem sint beatae veritatis. Voluptatum nostrum quisquam non id deserunt ratione repellat, quam dolor aut animi! Nihil, ipsum omnis minima illo cum autem neque asperiores nulla voluptates blanditiis unde sit consequatur obcaecati cumque excepturi repudiandae ad et exercitationem eius culpa enim.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section">
+                <h1 style="font-size: 24px;">Contact Us</h1>
+                <div class="contact-form fade-in">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <label for="Full Name">Full Name</label>
+                        <p style="width: 100%;">{{forms.fullname}}</p>
+                        {{forms.fullname.css_class}}
+                        <div class="email-and-phone">
+                            <div class="email">
+                                <label for="Email">Email</label>
+                                {{forms.email}}
+                            </div>
+                            <div class="phone">
+                                <label for="Phone Number">Phone</label>
+                                {{forms.phone}}
+                            </div>
+                        </div>
+                        <label for="Message">Message</label>
+                        {{forms.message}}
+                        <!-- {{ forms.as_p }} -->
+                        <input type="submit" value="Submit" style="background-color: rgb(0, 38, 255); padding: 10px 40px; border-radius: 10px; border: none; cursor: pointer;" name="Submit">                    
+                    </form>
+
+                </div>
+            </section>
+        </main>
+    </section>
+    {% endblock content %}
+    <!-- Footer section -->
+
+</body>
+</html>
