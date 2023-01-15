@@ -1,121 +1,3 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
-}
-
-p {
-    font-family: 'TT Firs Neue Thin';
-    font-size: 16px;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'TT Firs Neue Light'
-}
-
-.navBar {
-    padding-bottom: 20px;
-}
-
-.logo-nav-elements {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-size: cover;
-    background-color: #c3e5e8;
-    font-family: 'TT Firs Neue Light';
-    box-shadow: 2px 5px 8px rgb(65, 73, 73);
-}
-
-.nav-menu-items img {
-    width: 35px;
-    height: 30px;
-}
-
-.nav-menu-items {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.breadcrumb {
-    display: none;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 5px;
-}
-
-.logo img {
-    width: 350px;
-    height: 150px;
-}
-
-.nav-elements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0;
-}
-
-.nav-ele2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    padding: 8px 20px;
-}
-
-
-.church-name {
-    color: rgb(2, 18, 39);
-    font-style: oblique;
-    font-size: 20px;
-    margin: 20px;
-    line-height: 30px;
-}
-
-.nav-elements a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 15px;
-}
-
-.nav-ele2 a {
-    background-color: #b5061f;
-    border-radius: 15px;
-    padding: 5px 20px;
-}
-
-.nav-elements a:hover {
-    border-radius: 5px;
-    border: 1px solid rgb(255, 230, 161);
-    transition: 1s;
-}
-
-.nav-buttons {
-    visibility: visible;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: #eadaca;
-    color: #021220;
-} */
 .fade-in {
     opacity: 0;
     tansition: opacity 250ms ease-in;
@@ -126,225 +8,58 @@ h4 {
     transition: all 1s;
 }
 
-
-@media screen and (max-width:600px) {
-    /* .nav-elements {
-        visibility: hidden;
-        display: block;
-        justify-content: baseline;
-        grid-template-rows: auto;
-        background-color: #01305b;
-        height: 80%;
-        width: 80%;
-        z-index: 1;
-        background-position: left;
-        position: absolute;
-        padding: 20px 0;
-        margin: 0;
-    }
-
-    .mobile-nav-view a{
-        display: block;
-        justify-content: start;
-        align-items: flex-start;
-        color: aliceblue;
-        line-height: 30px;
-    }
-
-    .nav-elements a {
-        margin: 20px 30px;
-        width: 50%;
-        height: 100%;
-    }
-
-    .logo-nav-elements {
-        height: min-content;
-        display: block;
-        padding: 0px;
-    }
-
-    .breadcrumb {
-        visibility: visible;
-        width: 35px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: #00ffd5;
-        padding: 2px;
-    }
-    .nav-menu-items {
-        display: block;
-        justify-content: left;
-        align-items: flex-start;
-        margin: 0;
-        padding: 5px;
-    }
-    .mobile-nav-view a {
-        display: block;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .nav-ele2 {
-        display: flex;
-        justify-content: left;
-        align-items: flex-start;
-    }
-
-    .church-name {
-        text-align: center;
-    } */
-
-}
-
-
 /* main gallery images */
 .gallery h1{
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
 }
 
 .gallery {
-    margin: 30px 30px;
+    padding: 10px;
+    align-items: center;
+    display: block;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .main-gallery{
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: auto 1fr;
-    gap: 5px;
-}
-
-
-.main-left-img-slide{
-    display: block !important;
-    gap: 5px;
-}
-
-.main-right-img-slide{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
-}
-
-.main-right-img-slide img{
-    height: 100%;
-    width: 100%;
-}
-.main-right-img-slide img:hover {
-    transform: scaleX(1.1);
-    transition: 1s;
-}
-
-.bottom-img-block{
-    display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .top-img-block{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    margin-bottom: 5px;
-}
-
-
-@media screen and (max-width:480px){
-    .top-img-block {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-    }
+    width: 100%;
 }
 
 .top-img-block img{
-    height: 200px;
+    height: 18rem;
     width: 100%;
-}
-.top-img-block img:hover {
-    transform: scaleX(1.1);
-    transition: 1s;
+    border-radius: 10px;
 }
 
-.full-left-img img{
-    height: 100%;
-    width: 100%;
+.top-img-block p{
+    font-size: 16px;
 }
-.full-left-img img:hover {
-    transform: scaleX(1.1);
-    transition: 1s;
-}
-
-
-.block-bottom-img img{
-    height: 100%;
-    width: 100%;
-}
-
-.block-bottom-img img:hover{
-    transform: scaleX(1.1);
-    transition: 1s;
-}
-
-.block-bottom-img{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    gap: 5px;
-}
-
-
 
 /* Footer section */
-/* .footer-area {
-    width: 100%;
-    background-color: #01305b;
-    padding: 20px;
-    color: white;
-}
-
-.footer-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    padding: 10px;
-    width: 100%;
-}
-
-.footer {
-    margin-bottom: 20px;
-}
-
-
-.social-links {}
-
-.social-links img {
-    width: 40px;
-    height: 30px;
-    color: #c3e5e8;
-} */
 
 @media screen and (max-width:600px) {
 
-    .footer-items {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-    }
+
     .gallery {
-        margin: 5px;
+        width: 100%;
     }
     .main-gallery {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+
     }
-    .bottom-img-block {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 5px;
+    .top-img-block img {
+        height: 18rem;
+        width: 100%;
     }
 
 }

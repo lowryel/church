@@ -27,6 +27,23 @@ print(next_time)
 
 print(repr(list3))
 
+def text():
+    return "hello".upper()
+
+# @text()
+def call_text():
+    return text()
+
+print((call_text()))
 
 
+from collections import Counter
+c = Counter(["increase", "plan", "build", "test", "deploy"])
+c['monitor'] = 0
+
+print(+c)
+print(c.most_common())
+total = c.total()
+print(c.update(["deploy"]))
+print(total)
 

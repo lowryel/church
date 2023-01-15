@@ -64,17 +64,13 @@
             <div class="image-gallery">
                 <h1>VIEWS FROM OUR WEEKLY SESSIONS</h1>
                 <div class="images-comps">
-                    <!-- <img class="lazy fade-in" src="{% static './img/beautiful worship.jpg' %}" alt="images from our weekly events">
-                    <img class="lazy fade-in" src="{% static './img/the word.jpg' %}" alt="images from our weekly events">
-                    <img class="lazy fade-in" src="{% static './img/prayerfulsmile.jpg' %}" alt="images from our weekly events">
 
-                    <img class="lazy fade-in" src="{% static './img/worshipimg.jpg' %}" alt="images from our weekly events">
-                    <img class="lazy fade-in" src="{% static './img/prayerfulsmile.jpg' %}" alt="images from our weekly events"> -->
                     {% for img in images %}
                     <img class="lazy fade-in" src="{{img.image.url}}" alt="{{img.caption}}">
                     {% endfor %}                    
                 </div>
             </div>
+
             <div class="main-events-section">
                 <h1>UPCOMING EVENTS</h1>
                 <div class="upcoming-events-section">
@@ -122,10 +118,18 @@
                 </span>
             </div>
         </div>
+        <div style="display: block; justify-content: center; align-items: center;">
+            <p style="text-align: center; font-size: 12px;" id="date"></p>
+        </div>
     </footer>
 
     <script src="{% static 'js/script.js' %}"></script>
     <script>
+        const date = new Date().getFullYear();
+        const setDate = document.getElementById('date');
+        setDate.innerHTML = `Copyright &copy` + date;
+        console.log(date);
+
         const menu = document.querySelector("#menu-img");
         const navbar = document.querySelector(".navigation");
 

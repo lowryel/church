@@ -148,11 +148,12 @@ h4 {
     margin-bottom: 10px;
 }
 .option-two h2{
-    font-size: 18px
+    font-size: 18px;
+    text-transform: capitalize;
 }
 .option-two a{
     background-color:#ca0768;
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 30px 0;
     text-decoration: none;
     color: black;

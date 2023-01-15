@@ -30,7 +30,7 @@ class RecentEvents(models.Model):
     event = models.ForeignKey(Events, on_delete=models.CASCADE)
     event_details = models.TextField()
     image = models.ImageField(upload_to = "media/img")
-    date = models.DateField()
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.event.name

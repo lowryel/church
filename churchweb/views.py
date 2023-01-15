@@ -48,15 +48,13 @@ def gallery(request):
 def events(request):
     rsvp = RSVP.objects.all()
     events_ = Events.objects.filter(status=False)
-    # for event in events_:
-    #     if event.status and event.event_date <= date(2023,1,13):
-    #         event.delete()
-    #         event.name.save()
-        # print(event.name)
+
+    recents = RecentEvents.objects.all().order_by("-date")[:2]
 
     context = {
         'events': events_,
         'rsvp':rsvp,
+        "recents":recents,
     }
     return render(request, 'events.html', context)
 
@@ -64,3 +62,4 @@ def events(request):
 def give(request):
 
     return render(request, 'give.html')
+

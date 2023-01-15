@@ -7,31 +7,16 @@
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
-
         <main class="container">
             <section class="gallery">
                 <h1>Photo</h1>
                 <div class="main-gallery">
-                    <div class="main-left-img-slide">
-                        <div class="top-img-block">
-                            <img class="fade-in" src="{% static './img/prayerfulsmile.jpg' %}" alt="left photo">
-                            <img class="fade-in" src="{% static './img/beautiful worship.jpg' %}" alt="right photo">
-                        </div>
-                        <div class="bottom-img-block">
-                            <div class="full-left-img fade-in">
-                                <img src="{% static './img/prayerfulsmile.jpg' %}" alt="left">
-                            </div>
-
-                            <div class="block-bottom-img">
-                                <img class="fade-in" src="{% static './img/beautiful worship.jpg' %}" alt="block 1">
-                                <img class="fade-in" src="{% static './img/prayerfulsmile.jpg' %}" alt="block 2">
-                            </div>
-                        </div>
+                    {% for img in images %}
+                    <div class="top-img-block">
+                        <img class="fade-in" src="{{img.image.url}}" alt="{{img.caption}}">
+                        <p>{{img.caption}}</p>
                     </div>
-                    <div class="main-right-img-slide">
-                        <img class="fade-in" src="{% static './img/beautiful worship.jpg' %}" alt="full length right">
-                        <img class="fade-in" src="{% static './img/beautiful worship.jpg' %}" alt="full length right">
-                    </div>
+                    {% endfor %}
                 </div>
 
             </section>
