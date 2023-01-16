@@ -1,3 +1,5 @@
+from django.contrib.syndication.views import Feed
+from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents
@@ -62,4 +64,6 @@ def events(request):
 def give(request):
 
     return render(request, 'give.html')
+
+
 

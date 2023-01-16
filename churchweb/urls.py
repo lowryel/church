@@ -9,7 +9,7 @@ urlpatterns = [
     path('church/about', about, name = 'about'),
     path('church/gallery', gallery, name = 'gallery'),
     path('church/events', events, name = 'events' ),
-    path('church/give', give, name = 'give')
+    path('church/give', give, name = 'give'),
 ]
 
 
