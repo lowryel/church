@@ -37,7 +37,7 @@ def call_text():
 print((call_text()))
 
 
-from collections import Counter
+from collections import Counter, deque
 c = Counter(["increase", "plan", "build", "test", "deploy"])
 c['monitor'] = 0
 
@@ -46,4 +46,16 @@ print(c.most_common())
 total = c.total()
 print(c.update(["deploy"]))
 print(total)
+
+dech = (1, 2, 3, 4, 5)
+dequed = deque(dech)
+for ele in dequed: print(ele)
+dequed.pop()
+print(dequed)
+dequed.popleft()
+print(dequed)
+dequed.extend([8,9,7,6])
+print(dequed)
+print(list(reversed(dequed)))
+print(dequed)
 

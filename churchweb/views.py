@@ -30,6 +30,7 @@ def about(request):
         forms = ContactForm(request.POST)
         if forms.is_valid():
             fullname = forms.cleaned_data['fullname']
+            email = forms.cleaned_data['email']
             forms.save()
             return redirect('/')
     else:
