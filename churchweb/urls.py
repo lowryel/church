@@ -10,6 +10,7 @@ urlpatterns = [
     path('church/gallery', gallery, name = 'gallery'),
     path('church/events', events, name = 'events' ),
     path('church/give', give, name = 'give'),
+    path('church/rsvp/<int:pk>', rsvpView, name='rsvp'),
 ]
 
 

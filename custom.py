@@ -1,6 +1,9 @@
 from datetime import datetime
 # print(datetime.strftime("%A %d, %B %Y"))
 from datetime import date
+import uuid
+id = uuid.uuid4()
+print(id)
 list1 = ["name","age","worth"]
 list2 = ["Eugene",29,250000]
 list3 = dict(zip(list1, list2))

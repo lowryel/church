@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-banner p{
-    color: azure;
+    color: rgb(0, 248, 248);
     display: flex;
     align-items: center;
     position: center;
@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
 }
 
 
-@keyframes glowing {
+/* @keyframes glowing {
     0% {
         background-position: 0 0;
     }
@@ -92,7 +92,7 @@ h1, h2, h3, h4 {
     100% {
         background-position: 0 0;
     }
-}
+} */
 
 .hero-banner-comps a{
     text-decoration: none;
@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
 
 .hero-banner-comps a:hover {
     background-color: #c5e3e8;
-    transition:200ms;
+    transition:1s;
 }
 
 .nav-elements{

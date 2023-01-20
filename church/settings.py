@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 ROOT_URLCONF = "church.urls"
 
 TEMPLATES = [

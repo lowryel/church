@@ -34,51 +34,19 @@
                 </div>
                 <h1>Upcoming Events</h1>
                 <div class="upcoming-events">
-                    <div class="upcoming-event-objects fade-in">
-                        <img src="{% static './img/the word.jpg' %}" alt="event-one">
-                        <div>
-                            <h2>08</h2>
-                            <p>JUNE</p>
-                        </div>
-                        <h2>MEGAFEST LAUNCH</h2>
-                        <a href="#">RSVP</a>
-                    </div>
-                    <div class="upcoming-event-objects fade-in">
-                        <a href="#">RSVP</a>
-                        <div>
-                            <h2>09</h2>
-                            <p>JUNE</p>
-                        </div>
-                        <h2>MEGAFEST LAUNCH</h2>
-                        <img src="{% static './img/the word.jpg' %}" alt="event-two">
 
-                    </div>
                     {% for event in events %}
                     <div class="upcoming-event-objects fade-in">
-                        <img src="{% static './img/the word.jpg' %}" alt="event-three">
+                        <img src="{{event.event_poster.url}}" alt="event-three">
                         <div>
                             <h2>{{event.event_date|date:"jS"}}</h2>
                             <p style="text-transform:capitalize;">{{event.event_date|date:"F"}}</p>
                         </div>
-                        <h2>{{ event.name|upper }}</h2>
-                        <button onclick="togglePopup()">RSVP</button>
-
-                        <div class="popup" id="popup-1">
-                            {% for rs in rsvp %}
-                            
-                            <div class="overlay"></div>
-                            <div class="content">
-                                <div class="close-btn" onclick="togglePopup()">&times;</div>
-                                
-                                <h1>Name: {{ rs.designation|title }} {{ rs.rs_vp|title }}</h1>
-                                <p>Designation: </p>
-                                <p>Contact: {{ rs.contact }}</p>
-                            </div>
-                            {% endfor %}
-                        </div>
-
+                            <h2>{{ event.name|upper }}</h2>
+                            <a href="{% url 'rsvp' event.rsvp.pk %}">RSVP</a>
                     </div>
                     {% endfor %}
+
                 </div>
 
             </section>
@@ -86,9 +54,9 @@
 
         <script>
             // RSVP popup box
-            function togglePopup(){
-                document.getElementById("popup-1").classList.toggle("active");
-            }
+            // function togglePopup(){
+            //     document.getElementById("popup-1").classList.toggle("active");
+            // }
 
         </script>
     {% endblock content %}

@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP</title>
-</head>
+{% extends 'index.html' %}
+{% load static %}
+
+    {% block content %}
 <body>
     <style>
         .container{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: black;
         }
         .row{
-            margin: 50px 100px;
+            margin: 20px 100px;
             padding: 20px;
             background-color: #fff;
-            border-radius: 10px 0;
+        }
+        @media screen and (max-width:600px){
+            .row{
+                margin: 5px;
+                padding: 5px;
+            }
         }
     </style>
 
-
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <h1>Minister for Today's Program</h1><hr>
+            <div class="col-sm">
                 <div class="card">
-                    <h4>RSVP</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sunt dolorum repellendus harum tempora, sint aperiam error porro quaerat facilis.</p>
+                    <h4>{{rsvp.designation}} {{rsvp.rs_vp}}</h4>
+                    <p>{{rsvp.contact}}</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sunt dolorum repellend</p>
+                    <p>{{rsvp.designation}}</p>
                 </div>
             </div>
         </div>
     </div>    
     <div class="card-header"></div>
 </body>
-</html>
+{% endblock content %}

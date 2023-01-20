@@ -1,4 +1,7 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.core.mail import send_mail
 
 # Create your models here.
 
@@ -13,6 +16,8 @@ class RSVP(models.Model):
     rs_vp = models.CharField(max_length=120)
     designation = models.CharField(max_length=120, blank=True, null=True)
     contact = models.CharField(max_length=150, blank=True, null=True)
+    def __str__(self):
+        return self.designation + " " + self.rs_vp
 
 class Events(models.Model):
     name = models.CharField(max_length=256)
@@ -49,5 +54,15 @@ class ContactUs(models.Model):
 class Gallery(models.Model):
     caption = models.CharField(max_length=128, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    date_posted = models.DateTimeField(auto_now_add=True, null=True)
+
+# @receiver(post_save, sender=ContactUs, created)
+
+def SendEmailToContact(sender, instance, created, **kwargs):
+    print("created new contact", created)
+    print("Sending email to %s" % instance)
+    print((instance.email))
+ 
+post_save.connect(SendEmailToContact, sender=ContactUs)
 
 
