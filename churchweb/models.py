@@ -3,6 +3,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.mail import send_mail
 from django.utils.translation import gettext_lazy as _
+from django.conf import settings
 
 # Create your models here.
 
@@ -53,6 +54,10 @@ class RecentEvents(models.Model):
     def __str__(self):
         return self.event.name
 
+defaultVerse = "I and my father are one - John 10:30"
+class RandomVerse(models.Model):
+    verse = models.TextField(default=defaultVerse)
+
 class ContactUs(models.Model):
     fullname = models.CharField(max_length=256)
     email = models.EmailField(null= True)
@@ -86,7 +91,15 @@ def SendEmailToContact(sender, instance, created, **kwargs):
     print("created new contact", created)
     print("Sending email to %s" % instance)
     print((instance.email))
+    if created:
+        send_mail(
+            f'Hello {instance.fullname}',
+            'We welcome you to Coffie Bekoe Ministry (Easy wrapper for sending a single message to a recipient list. All members of the recipient list will see the other recipients in the field.)',
+            settings.EMAIL_HOST_USER,
+            [instance.email],
+            fail_silently = False,
+        )
  
 post_save.connect(SendEmailToContact, sender=ContactUs)
 
-
+# zqvpkhupxvcwbkrq

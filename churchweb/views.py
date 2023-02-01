@@ -2,7 +2,7 @@ from django.contrib.syndication.views import Feed
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents
+from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents, RandomVerse
 from django.db.models import Sum
 from .forms import FruitForm, ContactForm
 from datetime import date
@@ -13,6 +13,7 @@ from datetime import date
 def index(request):
     events_ = Events.objects.all().order_by('-event_date')[:3]
     images = Gallery.objects.all().order_by("-date_posted")[:6]
+    random_verse = RandomVerse.objects.order_by("?").first()
 
     for event in events_:
         print(event.rsvp.rs_vp)
@@ -20,6 +21,7 @@ def index(request):
     context = {
         'events':events_,
         'images': images,
+        'verses':random_verse,
     }
     return render(request, "index.html", context)
 

@@ -56,14 +56,9 @@
     text-decoration: underline;
 }
 
-/* .nav-buttons {
-    visibility: visible;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: #eadaca;
-    color: #021220;
-} */
+.contact-details p{
+    margin-top: 10px;
+}
 
 @media screen and (max-width:600px) {
 
@@ -84,6 +79,9 @@
     }
     .about-links a{
         margin: 5px;
+    }
+    .contact-section{
+        /* margin-top: 20px; */
     }
 }
 
