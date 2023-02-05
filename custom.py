@@ -2,7 +2,7 @@ from datetime import datetime
 # print(datetime.strftime("%A %d, %B %Y"))
 from datetime import date
 import time
-import asyncio
+# import asyncio
 # import uuid
 # id = uuid.uuid4()
 # print(id)
@@ -19,13 +19,7 @@ print(len(list3))
 iterate = iter(list3)
 # for (k,v) in iterate:
 #     print(zip(k,v))
-print(iterate.__next__())
-print(iterate.__next__())
-print(iterate.__next__())
-try:
-    print(repr(iterate.__next__()))
-except StopIteration:
-    print("Values exhausted")
+
 
 # next_time = date(2023, 1, 15)
 # # print(type(next_time))
@@ -90,5 +84,9 @@ print("=====================================================")
 
 # This function uses a for loop to iterate through the desired range of numbers, starting with the 2nd number in the sequence(1) up to the nth number.
 # You can also change the range in the for loop to get more or less numbers.
+
+print(ord('A'))
+for i in range(65,91):
+    print(chr(i),i)
 
 
