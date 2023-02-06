@@ -17,11 +17,6 @@ h1, h2, h3, h4 {
 }
 
 
-/* .navBar{
-    padding-bottom: 20px;
-} */
-
-
 .logo-nav-elements{
     display: block;
     justify-content: space-between;
@@ -222,7 +217,7 @@ h1, h2, h3, h4 {
 
 .fade-in{
     opacity: 0;
-    tansition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
 }
 .fade-in.appear{
     opacity: 1;
