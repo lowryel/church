@@ -101,7 +101,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-banner-comps a:hover {
-    background-color: #c5e3e8;
+    background-color: #aee4ee;
     transition:1s;
 }
 
@@ -111,7 +111,7 @@ h1, h2, h3, h4 {
     align-items: center;
     padding: 10px;
     margin: 0;
-    background-color: #d1d1d1d3;
+    background-color: #aef2f7d3;
 }
 
 .nav-elements a {

@@ -1,5 +1,17 @@
-.container{
-    margin: 10px 60px;
+.body-section{
+    padding: 20px 60px;
     background-position: center;
     background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
 }
