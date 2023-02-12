@@ -1,2 +1,2 @@
 ### church
-**client project**
+**client project - church website**
