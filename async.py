@@ -15,13 +15,13 @@
 # for code in generator_zipcode:
 #     print(code)
 
-import json
-import boto3
-import sys
-import time
-s3 = boto3.resource("s3")
+# import json
+# import boto3
+# import sys
+# import time
+# s3 = boto3.resource("s3")
 # querying buckets by their name
-bucket = s3.buckets.all()
+# bucket = s3.buckets.all()
 # for i in bucket:
 #     print(i.name)
 
@@ -38,10 +38,10 @@ bucket = s3.buckets.all()
 
 # EC2 Instance_ID querying
 
-ec2 = boto3.client("ec2")
-response = ec2.describe_instances()
-Instance_Id = response["Reservations"][0]["Instances"][0]["InstanceId"]
-print(Instance_Id)
+# ec2 = boto3.client("ec2")
+# response = ec2.describe_instances()
+# Instance_Id = response["Reservations"][0]["Instances"][0]["InstanceId"]
+# print(Instance_Id)
 
 
 '''Setting up cloudwatch alarm'''
@@ -91,8 +91,9 @@ print(Instance_Id)
 
 
 
-print(time.sleep(10))
-'''Terminating an instance using the instance ID'''
-terminate_instance = ec2.terminate_instances(InstanceIds=[Instance_Id])
-print(terminate_instance)
+# print(time.sleep(10))
+# '''Terminating an instance using the instance ID'''
+# terminate_instance = ec2.terminate_instances(InstanceIds=[Instance_Id])
+# print(terminate_instance)
+
 

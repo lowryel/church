@@ -15,9 +15,6 @@ def index(request):
     images = Gallery.objects.all().order_by("-date_posted")[:6]
     random_verse = RandomVerse.objects.order_by("?").first()
 
-    for event in events_:
-        print(event.rsvp.rs_vp)
-
     context = {
         'events':events_,
         'images': images,
@@ -43,33 +40,32 @@ def about(request):
     }
     return render(request, "about.html", context)
 
+# gallery view
 def gallery(request):
     images = Gallery.objects.all()
-    name=request.user
-    print(name)
     context = {
         'images':images,
     }
     return render(request, 'gallery.html', context)
+
 
 def events(request):
     rsvp = RSVP.objects.all()
     events_ = Events.objects.filter(status=False).order_by("-event_date")
 
     recents = RecentEvents.objects.all().order_by("-date")[:2]
-    
     context = {
         'events': events_,
         'rsvp':rsvp,
         "recents":recents,
     }
-
     return render(request, 'events.html', context)
 
 
 def give(request):
 
     return render(request, 'give.html')
+
 
 def rsvpView(request, pk):
     rsvp = RSVP.objects.get(pk=pk)

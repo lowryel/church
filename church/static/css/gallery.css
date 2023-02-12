@@ -1,6 +1,6 @@
 .fade-in {
     opacity: 0;
-    tansition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
 }
 
 .fade-in.appear {
@@ -16,10 +16,11 @@
 
 .gallery {
     padding: 10px;
+    margin: 30px;
     align-items: center;
     display: block;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .main-gallery{
@@ -46,20 +47,14 @@
 
 @media screen and (max-width:600px) {
 
-
-    .gallery {
-        width: 100%;
-    }
     .main-gallery {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         width: 100%;
-
     }
     .top-img-block img {
         height: 18rem;
         width: 100%;
     }
-
 }
