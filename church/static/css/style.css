@@ -13,7 +13,7 @@ body{
     font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
 }
 p{
-    font-family: 'TT Firs Neue Thin';
+    font-family: 'TT Firs Neue Light';
     font-size: 14px;
 }
 h1, h2, h3, h4 {
@@ -67,12 +67,14 @@ h1, h2, h3, h4 {
 }
 
 .hero-banner p{
-    color: rgb(0, 248, 248);
+    color: #ffffff;
     display: flex;
     align-items: center;
     position: center;
     background-position: center;
-    padding-bottom: 12px;
+    padding: 12px 100px;
+    font-family: "TT Firs Neue Light";
+    font-size: 16px;
 }
 
 .hero-banner-comps{
@@ -166,9 +168,11 @@ h1, h2, h3, h4 {
 }
 
 #main-body{
-    margin: 10px 30px;
+    margin: 10px 60px;
     padding: 10px;
-    background-color: rgb(242, 248, 248);
+    background-color: rgb(229, 255, 255);
+    box-shadow: 0.5px 1px 5px 1.5px #c5bcbc;
+    scroll-behavior: smooth;
 }
 
 .main-items{
@@ -202,13 +206,14 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-family: 'TT Firs Neue Thin';
+    font-family: 'TT Firs Neue Light';
+    font-size: 16px;
     padding: 10px;
 }
 
 .about-text-side p{
     margin-bottom: 20px;
-    font-family: "TT Firs Neue Thin";
+    font-family: "TT Firs Neue Light";
     font-size: 16px;
     line-height: 6mm;
 }
@@ -243,6 +248,9 @@ h1, h2, h3, h4 {
     .logo img {
         width: 16rem;
         height: 120px;
+    }
+    .hero-banner p{
+        padding: 12px 50px;
     }
 
     .nav-elements{
@@ -317,7 +325,7 @@ h1, h2, h3, h4 {
         padding: 0;
     }
     #main-body{
-        margin: 5px;
+        margin: 15px;
         padding: 5px;
     }
     .hero-banner-comps {
@@ -365,6 +373,10 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     gap: 20px;
+}
+
+.date p .venue p{
+    font-family: "TT Firs Neue Light";
 }
 
 .main-upcoming-events{
@@ -418,8 +430,14 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+
+
 .footer{
     margin-bottom: 20px;
+}
+
+.footer p{
+    font-size: 16px;
 }
 
 .social-links img {

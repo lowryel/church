@@ -1,4 +1,8 @@
 /* Events section */
+p{
+    font-family: "TT Firs Neue Light";
+    font-size: medium;
+}
 .events{
     margin: 30px;
     background-color: #fcffff;
@@ -26,6 +30,7 @@
 
 .option-two p{
     margin-bottom: 10px;
+    line-height: 20px;
 }
 .option-two h2{
     font-size: 18px;
@@ -41,7 +46,7 @@
 
 .fade-in {
     opacity: 0;
-    tansition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
 }
 
 .fade-in.appear {
