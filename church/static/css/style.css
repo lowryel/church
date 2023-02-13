@@ -170,7 +170,7 @@ h1, h2, h3, h4 {
 #main-body{
     margin: 10px 60px;
     padding: 10px;
-    background-color: rgb(229, 255, 255);
+    background-color: rgb(240, 248, 248);
     box-shadow: 0.5px 1px 5px 1.5px #c5bcbc;
     scroll-behavior: smooth;
 }
