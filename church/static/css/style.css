@@ -17,7 +17,7 @@ p{
     font-size: 14px;
 }
 h1, h2, h3, h4 {
-    font-family: 'TT Firs Neue Light'
+    font-family: 'TT Firs Neue Light', monospace, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -48,6 +48,7 @@ h1, h2, h3, h4 {
     visibility: visible;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    position: static;
 }
 
 .church-name{
@@ -64,26 +65,20 @@ h1, h2, h3, h4 {
     height: 60vh;
     position: center;
     background-position: center;
-}
-
-.hero-banner p{
-    color: #ffffff;
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: center;
-    background-position: center;
-    padding: 12px 100px;
-    font-family: "TT Firs Neue Light";
-    font-size: 16px;
+    text-align: center;
+    color: #faf4f8;
 }
 
+/* 
+.hero-banner-comps p, .hero-banner-comps h1, .hero-banner-comps a{
+    border: 2px solid red;
+
+} */
 .hero-banner-comps{
-    display: grid;
-    grid-template-columns: repeat(auto-fill(400px, 1fr));
-    grid-template-rows: 1fr;
-    padding: 20px;
-    margin:0 100px;
-    transition: 1s all ease-in;
+    margin: 200px;
 }
 
 
@@ -104,12 +99,17 @@ h1, h2, h3, h4 {
 .hero-banner-comps a{
     text-decoration: none;
     color: rgb(250, 242, 242);
-    font-size: small;
+    font-weight: bold;
+    border: 2px solid rgb(252, 48, 116);
+    border-radius: 5px;
+    padding: 5px 12px;
+    text-align: center;
 }
 
 .hero-banner-comps a:hover {
-    background-color: #aee4ee;
+    background-color: #8fe7fdc7;
     transition:1s;
+    color: black;
 }
 
 .nav-elements{
