@@ -10,14 +10,14 @@
 
 body{
     width: 100%;
-    font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
+    font-family: 'TT Firs Neue Trl', 'TT Firs Neue Trl Light', 'TT Firs Neue Trl Regular';
 }
 p{
-    font-family: 'TT Firs Neue Light';
-    font-size: 14px;
+    font-family: 'TT Firs Neue Trl Light';
+    font-size: 16px;
 }
 h1, h2, h3, h4 {
-    font-family: 'TT Firs Neue Light', monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'TT Firs Neue Trl Light';
 }
 
 
@@ -28,7 +28,7 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     background-size: cover;
     background-color: #ffffff;
-    font-family: 'TT Firs Neue Thin';
+    /* font-family: 'TT Firs Neue Trl Light'; */
     box-shadow: 2px 5px 8px rgb(106, 124, 124);
     width: 100%;
 }
@@ -70,13 +70,10 @@ h1, h2, h3, h4 {
     align-items: center;
     text-align: center;
     color: #faf4f8;
+    font-size: large;
 }
 
-/* 
-.hero-banner-comps p, .hero-banner-comps h1, .hero-banner-comps a{
-    border: 2px solid red;
 
-} */
 .hero-banner-comps{
     margin: 200px;
 }
@@ -98,16 +95,16 @@ h1, h2, h3, h4 {
 
 .hero-banner-comps a{
     text-decoration: none;
-    color: rgb(250, 242, 242);
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    border: 2px solid rgb(252, 48, 116);
+    border: 2px solid rgb(11, 47, 253);
     border-radius: 5px;
     padding: 5px 12px;
     text-align: center;
 }
 
 .hero-banner-comps a:hover {
-    background-color: #8fe7fdc7;
+    background-color: #00c9fc;
     transition:1s;
     color: black;
 }
@@ -125,7 +122,7 @@ h1, h2, h3, h4 {
     text-decoration: none;
     color: black;
     padding:5px 20px;
-    font-family: 'TT Firs Neue Light';
+    font-family: 'TT Firs Neue Trl Light';
     font-size: 14px;
 }
 
@@ -206,14 +203,14 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-family: 'TT Firs Neue Light';
+    font-family: 'TT Firs Neue Trl Light';
     font-size: 16px;
     padding: 10px;
 }
 
 .about-text-side p{
     margin-bottom: 20px;
-    font-family: "TT Firs Neue Light";
+    font-family: "TT Firs Neue Trl Light";
     font-size: 16px;
     line-height: 6mm;
 }
@@ -375,9 +372,6 @@ h1, h2, h3, h4 {
     gap: 20px;
 }
 
-.date p .venue p{
-    font-family: "TT Firs Neue Light";
-}
 
 .main-upcoming-events{
     border-right: 3px solid rgb(35, 169, 202);
