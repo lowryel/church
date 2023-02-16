@@ -46,8 +46,8 @@
             </div>
         </header>
 
-        <main id="main-body" style="">
-            <h1 style="font-size: 20px; color: #44a2bc;">ABOUT US</h1>
+        <main id="main-body">
+            <h1 style="font-size: 20px;">ABOUT US</h1>
             <div class="main-items">
                 <div class="about-text-side lazy fade-in">
                     <p>We are an assignment of God established upon the earth to fulfill the will of God.</p>
@@ -73,25 +73,66 @@
                 </div>
             </div>
 
-            <div class="main-events-section">
-                <h1>UPCOMING EVENTS</h1>
-                <div class="upcoming-events-section">
-                    {% for event in events %}
-                    <div class="main-upcoming-events lazy fade-in">
-                        <div class="date">
-                            <h1>{{event.event_date|date:"jS"}}</h1>
-                            <p>{{event.event_date|date:"F"}}</p>
-                        </div>
+            <div class="recent-sermon">
+                <h1>RECENT SERMONS</h1>
+                <div class="past-sermon-section">
 
-                        <div class="venue">
-                            <h3>{{ event.name|upper }}</h3>
-                            <p>Start: {{event.time}}</p>
-                            <p>Venue: {{event.venue}}</p>
+                    <div class="sermon-section lazy fade-in">
+                        <div class="sermon">
+                            <img src="/static/img/the word.jpg" alt="sermon thumbnail" srcset="">
                         </div>
                     </div>
-                    {% endfor %}
+
+                    <div class="sermon-section lazy">
+
+                        <div class="sermon">
+                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
+                            </a><br>
+
+                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
+                            </a><br>
+
+                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+<!-- Events and Weekly Services -->
+            <div class="main-events-section">
+                <h1>EVENTS & WEEKLY SERVICES</h1>
+                <div class="upcoming-events-section">
+
+                    <div class="main-upcoming-events lazy fade-in">
+
+                        <div class="venue">
+                            <p>EVERY TUESDAY | 6:00PM - 8:30PM</p>
+                            <h3>MIDWEEK PRAYER SERVICE</h3>
+                        </div>
+                    </div>
+
+                    <div class="main-upcoming-events lazy fade-in">
+
+                        <div class="venue">
+                            <p>EVERY SUNDAY | 9:30AM - 12:00 NOON</p>
+                            <h3>MIRACLE SERVICE</h3>
+                        </div>
+                    </div>
+
 
                 </div>
+
+                <div class="major-upcoming-event lazy fade-in">
+
+                    <div class="major-event">
+                        <p>FRIDAY 10TH MARCH, 2023 | 9:30AM - 12:00 NOON</p>
+                        <h2>POWER NIGHT!</h2>
+                    </div>
+                    <a href="church/about#contact">MORE</a>
+                </div>
+
             </div>
         </main>
     </section>
@@ -122,6 +163,7 @@
                 </span>
             </div>
         </div>
+        <hr>
         <div style="display: block; justify-content: center; align-items: center;">
             <p style="text-align: center; font-size: 12px;" id="date"></p>
         </div>

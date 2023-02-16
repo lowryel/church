@@ -114,12 +114,12 @@ p{
 }
 
 /* Footer section */
- .footer-area {
+ /* .footer-area {
     width: 100%;
     background-color: #01305b;
     padding: 20px;
     color: white;
-}
+} */
 
 /* POPUP for the RSVP */
 .popup .overlay{
