@@ -193,7 +193,7 @@ h1, h2, h3, h4 {
 .about-image-side{
     background: linear-gradient(to right, rgba(235, 224, 224, 0.719), rgba(212, 176, 176, 0.932)), url(/static/img/prayerfulsmile.jpg) no-repeat center center;
     padding: 0 5px;
-    height: 400px;
+    height: 300px;
     width: 100%;
     position: relative;
 }
@@ -387,6 +387,13 @@ h1, h2, h3, h4 {
 .sermon p{
     background-color: #d8f3fae3;
     padding: 10px;
+
+}
+
+.sermon p:hover{
+    background-color: #8d8d8de3;
+    transition:2s;
+        
 }
 
 .sermon img{
@@ -542,7 +549,7 @@ h1, h2, h3, h4 {
         display: block;
         align-items: center;
         justify-content: center;
-        padding: 10px;
+        padding: 50px 20px;
     }
     .major-event{
         margin-bottom: 10px;

@@ -41,6 +41,13 @@ class Events(models.Model):
     def __str__(self):
         return self.name
 
+class Sermon(models.Model):
+    title = models.CharField(max_length=256, null=True, blank=True)
+    youtube_link=models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
 class RecentEvents(models.Model):
     event = models.ForeignKey(Events, on_delete=models.CASCADE)
     event_details = models.TextField()

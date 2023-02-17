@@ -1,5 +1,5 @@
 from django.contrib import admin
-from churchweb.models import Events, RSVP, ContactUs, RecentEvents, Gallery, RandomVerse
+from churchweb.models import Events, RSVP, ContactUs, RecentEvents, Gallery, RandomVerse, Sermon
 
 # Register your models here.
 
@@ -19,3 +19,9 @@ admin.site.register(RandomVerse)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['fullname', 'email', 'phone']
 
+
+@admin.register(Sermon)
+class SermonAdmin(admin.ModelAdmin):
+    list_display = ['title', 'youtube_link']
+    list_display_links = ['youtube_link']
+    list_editable = ['title']

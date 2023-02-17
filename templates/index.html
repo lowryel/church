@@ -86,13 +86,14 @@
                     <div class="sermon-section lazy">
 
                         <div class="sermon">
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
+                            {% for sermon in sermons %}
+                            <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
+                            </a><br>
+                            {% endfor %}
+                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
                             </a><br>
 
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
-                            </a><br>
-
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus recusandae inventore quasi, doloribus dolores, distinctio, consequuntur nam corporis quibusdam tempore aut excepturi? </p>
+                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
                             </a>
                         </div>
 
