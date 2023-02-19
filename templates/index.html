@@ -47,7 +47,7 @@
         </header>
 
         <main id="main-body">
-            <h1 style="font-size: 20px;">ABOUT US</h1>
+            <h1>ABOUT US</h1>
             <div class="main-items">
                 <div class="about-text-side lazy fade-in">
                     <p>We are an assignment of God established upon the earth to fulfill the will of God.</p>
@@ -86,15 +86,19 @@
                     <div class="sermon-section lazy">
 
                         <div class="sermon">
-                            {% for sermon in sermons %}
-                            <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
-                            </a><br>
-                            {% endfor %}
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
-                            </a><br>
+                                {% for sermon in sermons %}
+                                <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
+                                </a><br>
+                                {% endfor %}
+                                <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
+                                </a><br>
 
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
-                            </a>
+                                <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
+                                </a>
+                                <br>
+                                
+                                <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
+                                </a>
                         </div>
 
                     </div>
@@ -129,7 +133,7 @@
 
                     <div class="major-event">
                         <p>FRIDAY 10TH MARCH, 2023 | 9:30AM - 12:00 NOON</p>
-                        <h2>POWER NIGHT!</h2>
+                        <h1>POWER NIGHT!</h1>
                     </div>
                     <a href="church/about#contact">MORE</a>
                 </div>
@@ -142,7 +146,7 @@
     <footer class="footer-area">
         <div class="footer-items">
             <div class="footer lozad">
-                <h2>ADDRESS</h2>
+                <h1>ADDRESS</h1>
                 <p>POST OFFICE BOX TI515</p>
                 <p>ACCRA WEST, GHANA</p>
                 <br>
@@ -150,12 +154,12 @@
                 <p>Email: cofiebekoeministries@gmail.com</p>
             </div>
             <div class="footer lozad">
-                <h2>CHURCH HOURS</h2>
+                <h1>CHURCH HOURS</h1>
                 <p>Days: Monday - Sunday</p>
                 <p>Time: 8am - 4pm</p>
             </div>
             <div class="footer lozad">
-                <h2>FOLLOW US ON SOCIALS</h2>
+                <h1>FOLLOW US ON SOCIALS</h1>
                 <span class="social-links">
                     <a href="#"><img src="{% static './img/facebk.svg' %}" alt=""></a>
                     <a href="#"><img src="{% static './img/twitter.svg' %}" alt=""></a>

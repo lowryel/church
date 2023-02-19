@@ -53,13 +53,13 @@ def gallery(request):
 
 
 def events(request):
-    rsvp = RSVP.objects.all()
+    # rsvp = RSVP.objects.all()
     events_ = Events.objects.filter(status=False).order_by("-event_date")
 
     recents = RecentEvents.objects.all().order_by("-date")[:2]
     context = {
         'events': events_,
-        'rsvp':rsvp,
+        # 'rsvp':rsvp,
         "recents":recents,
     }
     return render(request, 'events.html', context)
@@ -72,6 +72,8 @@ def give(request):
 
 def rsvpView(request, pk):
     rsvp = RSVP.objects.get(pk=pk)
+    events_ = Events.objects.filter(status=False)
+    print(events_)
     context={
         'rsvp': rsvp,
     }

@@ -37,6 +37,10 @@
     padding: 5px;
 }
 
+h1{
+    font-size: 32px;
+}
+
 .about-links a{
     display: block;
     justify-content: start;

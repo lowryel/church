@@ -14,6 +14,16 @@
             padding: 20px;
             background-color: #fff;
         }
+        .rsvp{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+        .rsvp img{
+            width: 100%;
+            height: 20rem;
+        }
         @media screen and (max-width:600px){
             .row{
                 margin: 5px;
@@ -24,9 +34,19 @@
 
     <div class="container">
         <div class="row">
-            <h1>Minister for Today's Program</h1><hr>
+            <h1>MINISTER FOR TODAY'S PROGRAM</h1><hr>
             <div class="col-sm">
+                <div class="rsvp">
+                {% if events  %}
+                    <div class="event-title-date">
+                        <h2>BRAINSTORMING SESSION</h2>
+                        <p>25th February, 2023</p>
+                    </div>
+                    <img src="/static/img/the word.jpg" alt="event image">
+                {% endif %}
+                </div>
                 <div class="card">
+                    <h2>MINISTER DETAILS</h2>
                     <h4>{{rsvp.designation}} {{rsvp.rs_vp}}</h4>
                     <p>{{rsvp.contact}}</p>
 
@@ -35,6 +55,20 @@
             </div>
         </div>
     </div>    
-    <div class="card-header"></div>
+    <div class="card-header">
+
+    </div>
 </body>
 {% endblock content %}
+
+                    {% for event in events %}
+                    <div class="upcoming-event-objects fade-in">
+                        <img src="{{event.event_poster.url}}" alt="event-three">
+                        <div>
+                            <h2>{{event.event_date|date:"jS"}}</h2>
+                            <p style="text-transform:capitalize;">{{event.event_date|date:"F"}}</p>
+                        </div>
+                            <h2>{{ event.name|upper }}</h2>
+                            <a href="{% url 'rsvp' event.rsvp.pk %}">RSVP</a>
+                    </div>
+                    {% endfor %}
