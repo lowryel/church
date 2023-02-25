@@ -13,13 +13,11 @@ from datetime import date
 def index(request):
     events_ = Events.objects.all().order_by('-event_date')[:3]
 
-    images = Gallery.objects.all().order_by("-date_posted")[:6]
     random_verse = RandomVerse.objects.order_by("?").first()
     sermons = Sermon.objects.all()
 
     context = {
         'events':events_,
-        'images': images,
         'verses':random_verse,
         'sermons': sermons,
     }
@@ -53,7 +51,7 @@ def gallery(request):
 
 
 def events(request):
-    # rsvp = RSVP.objects.all()
+    rsvp = RSVP.objects.all()
     events_ = Events.objects.filter(status=False).order_by("-event_date")
 
     recents = RecentEvents.objects.all().order_by("-date")[:2]
@@ -71,11 +69,12 @@ def give(request):
 
 
 def rsvpView(request, pk):
-    rsvp = RSVP.objects.get(pk=pk)
-    events_ = Events.objects.filter(status=False)
-    print(events_)
+    # rsvp = RSVP.objects.get(pk=pk)
+    events_ = Events.objects.get(pk=pk)
+    print(events_.id)
+
     context={
-        'rsvp': rsvp,
+        'event': events_,
     }
     return render(request, 'rsvp-popup.html', context)
 

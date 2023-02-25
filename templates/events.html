@@ -43,7 +43,7 @@
                             <p style="text-transform:capitalize;">{{event.event_date|date:"F"}}</p>
                         </div>
                             <h2>{{ event.name|upper }}</h2>
-                            <a href="{% url 'rsvp' event.rsvp.pk %}">RSVP</a>
+                            <a href="{% url 'rsvp' event.pk %}">RSVP</a>
                     </div>
                     {% endfor %}
 

@@ -84,16 +84,14 @@ h1{
     .about-links a{
         margin: 5px;
     }
-    .contact-section{
-        /* margin-top: 20px; */
-    }
 }
 
 /* about */
 
 .contact-section h1{
-    font-size: 24px;
+    text-align: left;
 }
+
 .contact-form{
     display: grid;
     grid-template-columns: 1fr;
