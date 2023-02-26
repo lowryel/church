@@ -31,7 +31,9 @@
     margin-bottom: 20px;
 }
 
-/* about-left-text-area */
+/* .about-left-text-area h1{
+    text-align: left;
+} */
 .about-right-text-area{
     width: 100%;
     padding: 5px;
@@ -54,10 +56,11 @@ h1{
     border-bottom: 2px solid rgb(23, 126, 83);
 }
 .ambitions{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
-.ambitions h3{
-    text-decoration: underline;
+.ambitions h1{
+    text-align: center;
+
 }
 
 .contact-details p{
@@ -130,11 +133,6 @@ h1{
     grid-template-rows: 2fr;
 }
 
-.social-links img {
-    width: 40px;
-    height: 30px;
-    color: #c3e5e8;
-}
 
 @media screen and (max-width:600px) {
     .contact-section {

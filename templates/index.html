@@ -48,31 +48,23 @@
         </header>
 
         <main id="main-body">
-            <h1>ABOUT US</h1>
-            <div class="main-items">
-                <div class="about-text-side lazy fade-in">
-                    <p>We are an assignment of God established upon the earth to fulfill the will of God.</p>
-                    <p>A ministry of God through the Holy Spirit to send <b>Jesus</b> to the world.</p>
-    
-                    <p>We are physically located in Ghana and Spiritually located in God, empowered by the <b>Holy Spirit</b> to do everything possible for <b>Jesus</b> to be known across the world.</p>
-                    <a href="{% url 'about' %}">Read More</a>
-                </div>
+            <div class="main-page">
+                <h1>ABOUT US</h1>
+                <div class="main-items">
+                    <div class="about-text-side lazy fade-in">
+                        <p>We are an assignment of God established upon the earth to fulfill the will of God.</p>
+                        <p>A ministry of God through the Holy Spirit to send <b>Jesus</b> to the world.</p>
+        
+                        <p>We are physically located in Ghana and Spiritually located in God, empowered by the <b>Holy Spirit</b> to do everything possible for <b>Jesus</b> to be known across the world.</p>
+                        <a href="{% url 'about' %}">Read More</a>
+                    </div>
 
-                <div class="about-image-side lazy fade-in">
-                    <p>{{verses.verse}}</p>
-                </div>
+                    <div class="about-image-side lazy fade-in">
+                        <p>{{verses.verse}}</p>
+                    </div>
 
+                </div>                
             </div>
-{% comment %} 
-            <div class="image-gallery">
-                <h1>VIEWS FROM OUR WEEKLY SESSIONS</h1>
-                <div class="images-comps">
-
-                    {% for img in images %}
-                    <img class="lazy fade-in" src="{{img.image.url}}" alt="{{img.caption}}">
-                    {% endfor %}                    
-                </div>
-            </div> {% endcomment %}
 
             <div class="recent-sermon">
                 <h1>RECENT SERMONS</h1>
@@ -80,7 +72,7 @@
 
                     <div class="sermon-section lazy fade-in">
                         <div class="sermon">
-                            <iframe src="/static/img/video.mp4" alt="sermon thumbnail" srcset=""frameborder='0' height='320px' width='100%' scrolling='no' src='http://currentlyobsessed.me/api/v1/get_widget?wid=30&blog=Brighton+The+Day&widgetid=38585' frameborder="0" autoplay="True" allowfullscreen></iframe>
+                            <iframe src="{% static 'img/managing-God-resources.mp4' %}" alt="sermon thumbnail" srcset=""frameborder='0' height='320px' width='100%' scrolling='no' src='http://currentlyobsessed.me/api/v1/get_widget?wid=30&blog=Brighton+The+Day&widgetid=38585' frameborder="0" autoplay="True" allowfullscreen></iframe>
                             
                         </div>
                     </div>
@@ -131,14 +123,18 @@
 
                 </div>
 
+                {% for event in events %}
                 <div class="major-upcoming-event lazy fade-in">
-
                     <div class="major-event">
-                        <p>FRIDAY 10TH MARCH, 2023 | 9:30AM - 12:00 NOON</p>
-                        <h1>POWER NIGHT!</h1>
+                        <p style="text-transform: uppercase;">{{event.event_date | date:"l F, j Y" }} | {{event.from_time|time:"h:ia"}} - {{event.to_time|time:"h:ia"}}</p>
+                        <h1>{{ event.name | upper }}!</h1>
                     </div>
-                    <a href="church/about#contact">MORE</a>
+                    <div style="display: flex; justify-content: center;">
+                        <a style="text-align: center;" href="church/about#contact">MORE</a>
+                    </div>
+                    
                 </div>
+                {% endfor %}
 
             </div>
         </main>
@@ -149,11 +145,11 @@
         <div class="footer-items">
             <div class="footer lozad">
                 <h1>CONTACT INFO</h1>
-                <p><img src="/static/img/user.svg" alt="">  Cofie Bekoe Ministries</p>
-                <p><img src="/static/img/house-solid.svg" alt="">  Taifa, Hallelujah Junction</p>
+                <div><p><img src="/static/img/user.svg" alt=""> Cofie Bekoe Ministries</p></div>
+                <p><img src="/static/img/home.svg" alt=""> Taifa, Hallelujah Junction</p>
                 <br>
-                <p><img src="/static/img/phone-solid.svg" alt="">  +233556978861</p>
-                <p><img src="/static/img/mail.png" alt="">  cofiebekoeministries@gmail.com</p>
+                <p><img src="/static/img/phone.svg" alt=""> +233556978861</p>
+                <p><img src="/static/img/mail.svg" alt=""> cofiebekoeministries@gmail.com</p>
             </div>
             <div class="footer lozad">
                 <h1>CHURCH HOURS</h1>
@@ -165,9 +161,9 @@
                 <span class="social-links">
                     <a href="#"><img src="/static/img/facebook.svg" alt="">
                     </a>
-                    <a href="#"><img src="{% static './img/twitter.svg' %}" alt=""></a>
-                    <a href="#"><img src="{% static './img/instagram.svg' %}" alt=""></a>
-                    <a href="#"><img src="{% static './img/youtube.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static './img/tweeticon.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static './img/insta.svg' %}" alt=""></a>
+                    <a href="#"><img src="{% static './img/tube.svg' %}" alt=""></a>
                 </span>
             </div>
         </div>

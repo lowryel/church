@@ -11,7 +11,7 @@ from datetime import date
 
 
 def index(request):
-    events_ = Events.objects.all().order_by('-event_date')[:3]
+    events_ = Events.objects.all().exclude(event_type="N")
 
     random_verse = RandomVerse.objects.order_by("?").first()
     sermons = Sermon.objects.all()
@@ -69,7 +69,6 @@ def give(request):
 
 
 def rsvpView(request, pk):
-    # rsvp = RSVP.objects.get(pk=pk)
     events_ = Events.objects.get(pk=pk)
     print(events_.id)
 

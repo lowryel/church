@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.utils.translation import gettext_lazy as _
 from django.conf import settings
 
+
 # Create your models here.
 
 class Fruit(models.Model):
@@ -26,11 +27,19 @@ class RSVP(models.Model):
         return self.designation + " " + self.rs_vp
 
 class Events(models.Model):
+    STATUS_CHOICE = (
+        ("normal", "N"),
+        ("major", "M")
+    )
     name = models.CharField(max_length=256)
+    event_type=models.CharField(choices=STATUS_CHOICE, max_length=120, default="N")
     event_date = models.DateField()
     rsvp = models.ForeignKey(RSVP, on_delete=models.RESTRICT)
     event_poster = models.ImageField(upload_to = "media/img")
     time = models.TimeField(blank=True, null=True)
+    from_time = models.TimeField(blank=True, null=True)
+    to_time = models.TimeField(blank=True, null=True)
+
     venue = models.CharField(max_length=256)
     status = models.BooleanField(default=False)
 
@@ -98,14 +107,17 @@ def SendEmailToContact(sender, instance, created, **kwargs):
     print("created new contact", created)
     print("Sending email to %s" % instance)
     print((instance.email))
-    if created:
-        send_mail(
-            f'Hello {instance.fullname}',
-            'We welcome you to Coffie Bekoe Ministry (Easy wrapper for sending a single message to a recipient list. All members of the recipient list will see the other recipients in the field.)',
-            settings.EMAIL_HOST_USER,
-            [instance.email],
-            fail_silently = False,
-        )
+    try:
+        if created:
+            send_mail(
+                f'Hello {instance.fullname}',
+                'We welcome you to Coffie Bekoe Ministry (Easy wrapper for sending a single message to a recipient list. All members of the recipient list will see the other recipients in the field.)',
+                settings.EMAIL_HOST_USER,
+                [instance.email],
+                fail_silently = False,
+            )
+    except Exception:
+        return None
  
 post_save.connect(SendEmailToContact, sender=ContactUs)
 

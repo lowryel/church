@@ -81,7 +81,7 @@ p{
     grid-template-rows: 1fr;
     align-items: center;
     gap: 10px;
-    background-color: rgb(241, 216, 247);
+    background-color: rgb(243, 231, 247);
     margin-bottom: 20px;
 }
 
@@ -91,7 +91,7 @@ p{
 }
 
 .upcoming-event-objects a{
-    background-color: #ca0768;
+    background-color: #ff1375fa;
     padding: 20px 10px;
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ p{
     color: black;
 }
 .upcoming-event-objects button {
-    background-color: #ca0768;
+    /* background-color: #ca0768; */
     padding: 20px 10px;
     display: flex;
     justify-content: center;
@@ -113,13 +113,6 @@ p{
     font-size: 18px;
 }
 
-/* Footer section */
- /* .footer-area {
-    width: 100%;
-    background-color: #01305b;
-    padding: 20px;
-    color: white;
-} */
 
 /* POPUP for the RSVP */
 .popup .overlay{
