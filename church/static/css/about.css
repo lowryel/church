@@ -30,6 +30,12 @@
 .our-leaders-indiv{
     margin-bottom: 20px;
 }
+.our-leaders-indiv h2{
+    margin-bottom: 20px;
+    color: rgb(88, 95, 93);
+}
+
+
 
 /* .about-left-text-area h1{
     text-align: left;
@@ -60,7 +66,7 @@ h1{
 }
 .ambitions h1{
     text-align: center;
-
+    color: rgb(102, 114, 109);
 }
 
 .contact-details p{

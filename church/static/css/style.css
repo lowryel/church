@@ -10,15 +10,16 @@
 
 body{
     width: 100%;
-    font-family: 'TT Firs Neue Trl', 'TT Firs Neue Trl Light', 'TT Firs Neue Trl Regular';
+    font-family: 'Poppins', sans-serif;
 }
 p{
-    font-family: 'TT Firs Neue Trl Light';
+    font-family: 'Poppins Regular';
     font-size: 16px;
 }
 h1 {
-    font-family: 'TT Firs Neue Trl Light';
+    font-family: 'Poppins';
     font-size: 32px;
+    /* color: #3f4344; */
 }
 
 
@@ -29,7 +30,6 @@ h1 {
     flex-wrap: wrap;
     background-size: cover;
     background-color: #ffffff;
-    /* font-family: 'TT Firs Neue Trl Light'; */
     box-shadow: 2px 5px 8px rgb(106, 124, 124);
     width: 100%;
 }
@@ -63,7 +63,7 @@ h1 {
 .hero-banner{
     background: url(/static/img/hero-banner-img.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     position: center;
     background-position: center;
     display: flex;
@@ -124,8 +124,8 @@ h1 {
     text-decoration: none;
     color: black;
     padding:5px 20px;
-    font-family: 'TT Firs Neue Trl Light';
-    font-size: 14px;
+    font-family: 'Poppins Medium';
+    font-size: 16px;
 }
 
 .nav-ele2 {
@@ -213,14 +213,14 @@ h1 {
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-family: 'TT Firs Neue Trl Light';
+    font-family: 'Poppins Light';
     font-size: 16px;
     padding: 10px;
 }
 
 .about-text-side p{
     margin-bottom: 20px;
-    font-family: "TT Firs Neue Trl Light";
+    font-family: "Poppins Light";
     font-size: 16px;
     line-height: 6mm;
 }
@@ -431,6 +431,7 @@ h1 {
 .sermon a{
     text-decoration: none;
     color: black;
+    font-family: "Poppins", sans-serif ;
 }
 
 
