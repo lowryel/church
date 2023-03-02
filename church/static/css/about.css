@@ -46,7 +46,10 @@
 }
 
 h1{
-    font-size: 32px;
+    font-size: 28px;
+}
+p{
+    font-family: "Poppins";
 }
 
 .about-links a{
@@ -64,6 +67,9 @@ h1{
 .ambitions{
     margin-bottom: 50px;
 }
+
+
+
 .ambitions h1{
     text-align: center;
     color: rgb(102, 114, 109);
@@ -71,6 +77,7 @@ h1{
 
 .contact-details p{
     margin-top: 10px;
+    font-family: "Poppins";
 }
 
 @media screen and (max-width:600px) {
@@ -99,6 +106,7 @@ h1{
 
 .contact-section h1{
     text-align: left;
+    font-size: 28px;
 }
 
 .contact-form{

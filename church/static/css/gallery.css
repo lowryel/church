@@ -29,6 +29,10 @@
     gap: 20px;
 }
 
+.main-gallery p{
+    font-family: "Poppins";
+}
+
 .top-img-block{
     width: 100%;
 }
