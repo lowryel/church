@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: 'TT-Firs-Neue-Trial-Light';
+    font-style: normal;
+    font-weight: bold;
+    src: local('TT Firs Neue'), url('/static/fonts/TT Firs Neue Trial Light.ttf') format('opentype');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +19,7 @@
 
 body{
     width: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', "TT-Firs-Neue-Trial-Light";
 }
 p{
     font-family: 'Poppins Regular';
@@ -58,7 +66,8 @@ h1 {
     font-style: oblique;
     font-size: 20px;
     margin: 20px;
-    font-family: "Poppins", sans-serif ;
+    /* font-family: "Poppins", sans-serif ; */
+    font-family: "TT Firs Neue Trial Light"
     line-height: 30px;
 }
 
@@ -109,7 +118,8 @@ h1 {
 }
 
 .hero-banner-comps p, h1{
-    font-family: "Poppins";
+    /* font-family: "Poppins"; */
+    font-family: "TT-Firs-Neue-Trial-Light"
 }
 
 
