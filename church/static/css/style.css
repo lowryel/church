@@ -74,6 +74,7 @@ h1 {
     text-align: center;
     color: #000000;
     font-size: large;
+    /* margin: 100px 0; */
 }
 
 
@@ -202,8 +203,8 @@ h1 {
 .about-text-side h1{
     margin-bottom: 10px;
     font-size: 24px;
-    /* color: #44a2bc; */
     text-align:center;
+    font-size: 32px;
 }
 
 .about-image-side{
@@ -276,12 +277,9 @@ h1 {
         padding: 0;
     }
     .sermon iframe{
-        margin: 20px 0;
+        margin: 0 0;
     }
 
-    h1{
-        font-size: 24px;
-    }
 
     .nav-elements{
         display: grid;
@@ -567,23 +565,25 @@ h1 {
 } 
 
 
-.footer.lozad h1 {
+/* .footer.lozad h1 {
     display: inline;
     vertical-align: middle;
     margin-right: 5px;
-}
+} */
 
 .footer.lozad p {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
     font-family: "Poppins";
+    margin-bottom: 5px;
 }
 
 .footer.lozad img {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 
