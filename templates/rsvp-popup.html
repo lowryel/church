@@ -8,10 +8,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Poppins";
+            font-family: "TT-Firs-Neue-Trial-Regular";
         }
-        p{
-            font-family: "Poppins";
+        p, h1, h2{
+            font-family: "TT-Firs-Neue-Trial-Regular";
         }
         .row{
             margin: 20px 100px;
@@ -64,20 +64,6 @@
             </div>
         </div>
     </div>    
-    <div class="card-header">
-
-        {% for event in events %}
-        <div class="upcoming-event-objects fade-in">
-            <img src="{{event.event_poster.url}}" alt="event-three">
-            <div>
-                <h2>{{event.event_date|date:"jS"}}</h2>
-                <p style="text-transform:capitalize;">{{event.event_date|date:"F"}}</p>
-            </div>
-                <h2>{{ event.name|upper }}</h2>
-                <a href="{% url 'rsvp' event.rsvp.pk %}">RSVP</a>
-        </div>
-        {% endfor %}
-    </div>
 </body>
 {% endblock content %}
 
