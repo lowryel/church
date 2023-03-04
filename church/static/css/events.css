@@ -2,6 +2,7 @@
 p{
     /* font-family: "Poppins"; */
     font-family: "TT-Firs-Neue-Trial-Regular";
+    font-size: 18px;
 }
 
 h1 h2{
@@ -35,7 +36,8 @@ h1 h2{
 
 .option-two p{
     margin-bottom: 10px;
-    line-height: 20px;
+    line-height: 25px;
+    font-size: 18px;
 }
 .option-two h2{
     font-size: 18px;
@@ -93,7 +95,7 @@ h1 h2{
 
 .upcoming-event-objects img{
     width: 100%;
-    height: 150px;
+    height: 250px;
 }
 
 .upcoming-event-objects a{

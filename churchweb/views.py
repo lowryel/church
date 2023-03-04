@@ -43,7 +43,7 @@ def about(request):
 
 # gallery view
 def gallery(request):
-    images = Gallery.objects.all()
+    images = Gallery.objects.all().order_by("-date_posted")
     context = {
         'images':images,
     }

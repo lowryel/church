@@ -98,7 +98,7 @@ class Gallery(models.Model):
         verbose_name_plural = _("Gallery")
 
     def __str__(self):
-        return self.caption
+        return "media"
 
 
 # @receiver(post_save, sender=ContactUs, created)
