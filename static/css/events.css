@@ -1,130 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
-}
-
-p {
-    font-family: 'TT Firs Neue Thin';
-    font-size: 16px;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'TT Firs Neue Light'
-}
-
-.navBar {
-    padding-bottom: 20px;
-}
-
-.logo-nav-elements {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-size: cover;
-    background-color: #c3e5e8;
-    font-family: 'TT Firs Neue Light';
-    box-shadow: 2px 5px 8px rgb(65, 73, 73);
-}
-
-.logo-nav-elements img {
-    width: 35px;
-    height: 30px;
-}
-
-.nav-menu-items {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.breadcrumb {
-    display: none;
-    /* justify-content: space-between; */
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 5px;
-}
-
-.logo img {
-    width: 350px;
-    height: 150px;
-}
-
-.nav-elements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 0;
-}
-
-.nav-ele2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    padding: 8px 20px;
-}
-
-
-.church-name {
-    color: rgb(2, 18, 39);
-    font-style: oblique;
-    font-size: 20px;
-    margin: 20px;
-    line-height: 30px;
-}
-
-.nav-elements a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 15px;
-}
-
-.nav-ele2 a {
-    background-color: #b5061f;
-    border-radius: 15px;
-    padding: 5px 20px;
-}
-
-.nav-elements a:hover {
-    border-radius: 5px;
-    border: 1px solid rgb(255, 230, 161);
-    transition: ease-in-out 1.5s;
-}
-
-.nav-buttons {
-    visibility: visible;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: #eadaca;
-    color: #021220;
-}
-
-
 /* Events section */
+p{
+    /* font-family: "Poppins"; */
+    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-size: 18px;
+}
+
+h1 h2{
+    font-family: "TT-Firs-Neue-Trial-Regular";
+}
+
 .events{
     margin: 30px;
     background-color: #fcffff;
 }
 .events h1{
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -146,13 +36,16 @@ h4 {
 
 .option-two p{
     margin-bottom: 10px;
+    line-height: 25px;
+    font-size: 18px;
 }
 .option-two h2{
-    font-size: 24px
+    font-size: 18px;
+    text-transform: capitalize;
 }
 .option-two a{
     background-color:#ca0768;
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 30px 0;
     text-decoration: none;
     color: black;
@@ -160,7 +53,7 @@ h4 {
 
 .fade-in {
     opacity: 0;
-    tansition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in;
 }
 
 .fade-in.appear {
@@ -169,73 +62,6 @@ h4 {
 }
 
 @media screen and (max-width:600px) {
-    .nav-elements {
-        visibility: hidden;
-        display: block;
-        justify-content: baseline;
-        grid-template-rows: auto;
-        background-color: #01305b;
-        height: 80%;
-        width: 80%;
-        z-index: 1;
-        background-position: left;
-        position: absolute;
-        padding: 20px 0;
-        margin: 0;
-    }
-
-    .mobile-nav-view a {
-        display: block;
-        justify-content: start;
-        align-items: flex-start;
-        color: aliceblue;
-        line-height: 30px;
-    }
-
-    .nav-elements a {
-        margin: 20px 30px;
-        width: 50%;
-        height: 100%;
-    }
-
-    .logo-nav-elements {
-        height: min-content;
-        display: block;
-        padding: 0px;
-    }
-    .nav-ele2 {
-        display: flex;
-        justify-content: left;
-        align-items: flex-start;
-    }
-
-    .breadcrumb {
-        visibility: visible;
-        width: 35px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: #00ffd5;
-        padding: 2px;
-    }
-    .nav-menu-items {
-        display: block;
-        justify-content: left;
-        align-items: center;
-        margin: 0;
-        padding: 5px;
-    }
-    .mobile-nav-view a {
-        display: block;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .church-name {
-        text-align: center;
-    }
     .events {
         margin:5px;
     }
@@ -262,17 +88,18 @@ h4 {
     grid-template-rows: 1fr;
     align-items: center;
     gap: 10px;
-    background-color: rgb(241, 216, 247);
+    background-color: rgb(243, 231, 247);
     margin-bottom: 20px;
+    font-family: "TT-Firs-Neue-Trial-Regular";
 }
 
 .upcoming-event-objects img{
     width: 100%;
-    height: 150px;
+    height: 250px;
 }
 
 .upcoming-event-objects a{
-    background-color: #ca0768;
+    background-color: #ff1375fa;
     padding: 20px 10px;
     display: flex;
     justify-content: center;
@@ -281,7 +108,7 @@ h4 {
     color: black;
 }
 .upcoming-event-objects button {
-    background-color: #ca0768;
+    /* background-color: #ca0768; */
     padding: 20px 10px;
     display: flex;
     justify-content: center;
@@ -290,25 +117,10 @@ h4 {
     color: black;
 }
 
-/* Footer section */
-.footer-area {
-    width: 100%;
-    background-color: #01305b;
-    padding: 20px;
-    color: white;
+.upcoming-event-objects h2{
+    font-size: 18px;
 }
 
-.footer-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    padding: 10px;
-    width: 100%;
-}
-
-.footer {
-    margin-bottom: 20px;
-}
 
 /* POPUP for the RSVP */
 .popup .overlay{
@@ -359,22 +171,8 @@ h4 {
 }
 
 
-.social-links{
-
-}
-
-.social-links img{
-    width: 40px;
-    height: 30px;
-    color: #c3e5e8;
-}
 @media screen and (max-width:600px) {
 
-    .footer-items {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-    }
     .upcoming-event-objects {
         display: grid;
         grid-template-columns: 2fr;
