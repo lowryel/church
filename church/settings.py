@@ -24,8 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy"
 
 
-CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/",
-                        "https://church-production.up.railway.app/admin/login/?next=/admin/"]
 
 
 
@@ -60,9 +58,14 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+
+CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/",
+                        "https://church-production.up.railway.app/*"]
+
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
