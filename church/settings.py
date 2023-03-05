@@ -24,6 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy"
 
 
+CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/",
+                        "https://church-production.up.railway.app/admin/login/?next=/admin/"]
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
