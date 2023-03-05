@@ -35,7 +35,7 @@ class Events(models.Model):
     event_type=models.CharField(choices=STATUS_CHOICE, max_length=120, default="N")
     event_date = models.DateField()
     rsvp = models.ForeignKey(RSVP, on_delete=models.RESTRICT)
-    event_poster = models.ImageField(upload_to = "media/img")
+    event_poster = models.ImageField(upload_to = "img")
     time = models.TimeField(blank=True, null=True)
     from_time = models.TimeField(blank=True, null=True)
     to_time = models.TimeField(blank=True, null=True)
@@ -60,7 +60,7 @@ class Sermon(models.Model):
 class RecentEvents(models.Model):
     event = models.ForeignKey(Events, on_delete=models.CASCADE)
     event_details = models.TextField()
-    image = models.ImageField(upload_to = "media/img")
+    image = models.ImageField(upload_to = "img")
     date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -90,7 +90,7 @@ class ContactUs(models.Model):
 
 class Gallery(models.Model):
     caption = models.CharField(max_length=128, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to="img", null=True, blank=True)
     date_posted = models.DateTimeField(auto_now_add=True, null=True)
 
     class Meta:
