@@ -6,6 +6,7 @@ from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents, RandomV
 from django.db.models import Sum
 from .forms import FruitForm, ContactForm
 from datetime import date
+from django.template import RequestContext
 
 # Create your views here.
 
