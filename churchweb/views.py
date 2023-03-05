@@ -6,7 +6,7 @@ from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents, RandomV
 from django.db.models import Sum
 from .forms import FruitForm, ContactForm
 from datetime import date
-from django.template import RequestContext
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -24,7 +24,7 @@ def index(request):
     }
     return render(request, "index.html", context)
 
-
+@csrf_exempt
 def about(request):
     if request.method == "POST":
 
