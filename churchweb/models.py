@@ -103,6 +103,7 @@ class Gallery(models.Model):
 
 # @receiver(post_save, sender=ContactUs, created)
 
+
 def SendEmailToContact(sender, instance, created, **kwargs):
     print("created new contact", created)
     print("Sending email to %s" % instance)

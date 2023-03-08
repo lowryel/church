@@ -12,7 +12,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
-    events_ = Events.objects.all().exclude(event_type="N")
+    events_ = Events.objects.all().filter(event_type__iexact="major")
+    print(events_)
 
     random_verse = RandomVerse.objects.order_by("?").first()
     sermons = Sermon.objects.all()

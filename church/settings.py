@@ -37,12 +37,12 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'church-production.up.railway.app']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
+    "whitenoise.runserver_nostatic",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "whitenoise.runserver_nostatic",
     "churchweb",
 ]
 
@@ -58,9 +58,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STORAGES = {
+    "static": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/",
@@ -156,7 +159,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'church/static'
 ]
-STATIC_ROOT = BASE_DIR / 'static/'
+STATIC_ROOT = "/var/www/church-production.up.railway.app/static"
 
 
 MEDIA_URL = '/media/'
