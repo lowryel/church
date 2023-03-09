@@ -3,7 +3,7 @@
     font-family: 'TT-Firs-Neue-Trial-Medium';
     font-style: normal;
     font-weight: bold;
-    src: local('TT Firs Neue'), url('static/fonts/TT Firs Neue Trial Medium.ttf') format('opentype');
+    src: local('TT Firs Neue'), url('/static/fonts/TT Firs Neue Trial Medium.ttf') format('opentype');
 }
 
 
