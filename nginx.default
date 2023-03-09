@@ -1,0 +1,14 @@
+
+server {
+    listen 80;
+    server_name church-production.up.railway.app/;
+
+    location /static/ {
+        root /church;
+    }
+
+    location /media/ {
+        root /;
+    }
+
+}
