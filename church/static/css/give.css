@@ -7,11 +7,16 @@
     gap: 20px;
     font-size: 28px;
 }
-p{font-family: "Poppins";}
+p{font-family: "TT-Firs-Neue-Trial-Medium";}
+
 .accounts p{
     font-size: 20px;
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
+.verse p{
+    font-family: "TT-Firs-Neue-Trial-Medium";
+}
 .container{
     margin: 0;
     padding: 0;

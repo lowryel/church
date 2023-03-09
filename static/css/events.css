@@ -1,12 +1,12 @@
 /* Events section */
 p{
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
     font-size: 18px;
 }
 
 h1 h2{
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
+    font-size: 24px;
 }
 
 .events{
@@ -90,7 +90,7 @@ h1 h2{
     gap: 10px;
     background-color: rgb(243, 231, 247);
     margin-bottom: 20px;
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 .upcoming-event-objects img{

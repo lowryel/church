@@ -1,10 +1,11 @@
 
 @font-face {
-    font-family: 'TT-Firs-Neue-Trial-Regular';
-    font-style: bold;
+    font-family: 'TT-Firs-Neue-Trial-Medium';
+    font-style: normal;
     font-weight: bold;
-    src: local('TT Firs Neue'), url('/static/fonts/TT Firs Neue Trial Regular.ttf') format('opentype');
+    src: local('TT Firs Neue'), url('church/static/fonts/*') format('opentype');
 }
+
 
 *{
     margin: 0;
@@ -13,24 +14,19 @@
 }
 
 #main-body{
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 body{
     width: 100%;
-    font-family: 'Poppins', "TT-Firs-Neue-Trial-Regular";
+    font-family: 'TT-Firs-Neue-Trial-Medium';
 }
+
 p{
     font-family: "TT-Firs-Neue-Trial-Regular";
     font-size: 16px;
 }
-h1 {
-    /* font-family: 'Poppins'; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
-    font-size: 32px;
-    /* color: #3f4344; */
-}
+
 
 
 .logo-nav-elements{
@@ -67,9 +63,8 @@ h1 {
     font-style: oblique;
     font-size: 20px;
     margin: 20px;
-    /* font-family: "Poppins", sans-serif ; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
-    line-height: 30px;
+    font-family: "TT-Firs-Neue-Trial-Medium";
+
 }
 
 .hero-banner{
@@ -83,8 +78,6 @@ h1 {
     align-items: center;
     text-align: center;
     color: #000000;
-    font-size: large;
-    /* margin: 100px 0; */
 }
 
 
@@ -118,11 +111,15 @@ h1 {
     background-color: rgb(44, 40, 40);
 }
 
-.hero-banner-comps p, h1{
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular"
+.hero-banner-comps h1{
+    font-family: "TT-Firs-Neue-Trial-Medium";
+    font-weight: bolder;
+    font-size: 40px;
 }
 
+.hero-banner-comps p{
+    font-family: "TT-Firs-Neue-Trial-Medium";
+}
 
 .hero-banner-comps a:hover {
     background-color: #00c9fc;
@@ -143,8 +140,7 @@ h1 {
     text-decoration: none;
     color: black;
     padding:5px 20px;
-    /* font-family: 'Poppins Medium'; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
     font-size: 16px;
 }
 
@@ -165,7 +161,6 @@ h1 {
 .nav-elements a:hover{
     border-radius: 5px;
     border: 1px solid rgb(255, 180, 130);
-    transition: 1s;
 }
 
 .nav-menu-items {
@@ -214,16 +209,13 @@ h1 {
 
 .about-text-side h1{
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 30px;
     text-align:center;
-    font-size: 32px;
 }
 
 .about-image-side{
     background: linear-gradient(to right, rgba(235, 224, 224, 0.719), rgba(212, 176, 176, 0.932)), url(/static/img/praying.jpg) no-repeat center center;
     padding: 0 5px;
-    /* height: 100%;
-    width: 100%; */
     position: relative;
     background-size: cover;
 }
@@ -233,14 +225,14 @@ h1 {
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
     font-size: 16px;
     padding: 10px;
 }
 
 .about-text-side p{
     margin-bottom: 20px;
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
     font-size: 16px;
     line-height: 6mm;
 }
@@ -397,6 +389,7 @@ h1 {
     font-size: 32px;
     /* color: #44a2bc; */
     text-align: center;
+    font-weight: bold;
 }
 
 /* recent sermon section */
@@ -406,8 +399,9 @@ h1 {
 }
 .recent-sermon h1 {
     margin: 40px 0;
-    font-size: 32px;
+    font-size: 28px;
     text-align:center;
+    font-weight: bold;
 }
 
 .past-sermon-section{
@@ -432,8 +426,8 @@ h1 {
 .sermon p{
     background-color: #d8f3fae3;
     padding: 10px;
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    /* font-family: "TT-Firs-Neue-Trial-Medium"; */
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 .sermon p:hover{
@@ -449,8 +443,7 @@ h1 {
 .sermon a{
     text-decoration: none;
     color: black;
-    /* font-family: "Poppins", sans-serif ; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 
@@ -458,13 +451,11 @@ h1 {
 .main-events-section{
     margin-top:10px;
     padding-bottom: 10px;
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 .main-events-section h1 {
     margin: 20px 0;
-    font-size: 32px;
-    /* color: #44a2bc; */
+    font-size: 28px;
     text-align: center;
 }
 
@@ -483,6 +474,8 @@ h1 {
     justify-content: center;
     background-color: rgba(134, 2, 35, 0.767);
     border: 1px solid rgb(179, 167, 167);
+    /* font-size: 20px; */
+
 }
 
 
@@ -498,8 +491,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    /* font-family: "Poppins", sans-serif ; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 
 }
 
@@ -531,14 +523,12 @@ h1 {
     padding: 30px;
 }
 .major-event p{
-    /* font-family: "Poppins", sans-serif ; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 
 }
 
 .venue p{
-    /* font-family: "Poppins", sans-serif ; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 
 }
 
@@ -555,6 +545,10 @@ h1 {
     height: 50vh;
 }
 
+.footer h1{
+    font-size: 24px;
+}
+
 .footer-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -564,17 +558,6 @@ h1 {
 }
 
 
-/* .footer{
-    margin-bottom: 20px;
-    display: block;
-    justify-content: flex-start;
-}
-
-.footer p{
-    font-family: "Poppins";
-    font-size: 16px;
-}
-*/
 
 .footer img{
     width: 20px;
@@ -583,18 +566,11 @@ h1 {
 } 
 
 
-/* .footer.lozad h1 {
-    display: inline;
-    vertical-align: middle;
-    margin-right: 5px;
-} */
-
 .footer.lozad p {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
-    /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
     margin-bottom: 5px;
 }
 
@@ -615,6 +591,17 @@ h1 {
 }
 
 @media screen and (max-width:600px) {
+
+    .footer p {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .footer img {
+        display: inline-block;
+        vertical-align: middle;
+    }
     .images-comps {
         display: grid;
         grid-template-columns: 1fr;
@@ -642,9 +629,7 @@ h1 {
         margin-top:0px;
         /* padding-bottom: 10px; */
     }
-    .recent-sermon h1 {
-        margin: 20px 0;
-    }
+
 
     .footer-items {
         display: grid;

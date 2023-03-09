@@ -12,7 +12,7 @@ loglevel = "debug"
 workers = 2
 
 # The socket to bind
-bind = "0.0.0.0:8000"
+bind = "127.0.0.1:8000"
 
 # Restart workers when code changes (development only!)
 reload = True

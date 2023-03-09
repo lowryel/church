@@ -33,7 +33,7 @@
 .our-leaders-indiv h2{
     margin-bottom: 20px;
     color: rgb(88, 95, 93);
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 
@@ -47,7 +47,7 @@ h1{
 }
 p{
     /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 .about-links a{
@@ -76,7 +76,7 @@ p{
 .contact-details p{
     margin-top: 10px;
     /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "TT-Firs-Neue-Trial-Medium";
 }
 
 @media screen and (max-width:600px) {
@@ -105,7 +105,7 @@ p{
 
 .contact-section h1{
     text-align: left;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .contact-form{

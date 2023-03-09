@@ -12,6 +12,7 @@
 .gallery h1{
     font-size: 24px;
     text-align: center;
+    font-weight: bolder;
 }
 
 .gallery {
@@ -31,7 +32,7 @@
 
 .main-gallery p{
     /* font-family: "Poppins"; */
-    font-family: "TT-Firs-Neue-Trial-Regular";
+    font-family: "Popins";
 }
 
 .top-img-block{

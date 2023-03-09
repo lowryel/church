@@ -1,13 +1,13 @@
 
 server {
-    listen 80;
-    server_name church-production.up.railway.app/;
+    listen 8000;
+    server_name 127.0.0.1:8000;
 
-    location static/ {
+    location /static/ {
         root /church;
     }
 
-    location media/ {
+    location /media/ {
         root /;
     }
 
