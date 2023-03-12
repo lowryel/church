@@ -3,7 +3,7 @@
 """Gunicorn *development* config file"""
 
 # Django WSGI application path in pattern MODULE_NAME:VARIABLE_NAME
-wsgi_app = "church.wsgi:churchweb"
+wsgi_app = "church.wsgi:application"
 
 # The granularity of Error log outputs
 loglevel = "debug"

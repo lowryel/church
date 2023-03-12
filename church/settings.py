@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'church-production.up.railway.app']
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "churchweb",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,16 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+
+# set S3 as the place to store your files.
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "")
+AWS_QUERYSTRING_AUTH = False # This will make sure that the file URL does not have unnecessary parameters like your access key.
+AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com'
 
 
 STORAGES = {
@@ -155,15 +166,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'church/static'
-]
-STATIC_ROOT = BASE_DIR / "static"
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'church/static'
+# ]
+# STATIC_ROOT = BASE_DIR / "static"
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
+
+
+# static media settings
+STATIC_URL = 'https: //' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+MEDIA_URL = STATIC_URL + 'media/'
+STATICFILES_DIRS = [BASE_DIR, "church/static"]
+STATIC_ROOT = 'static/'
+MEDIA_ROOT = 'media/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
+                       'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+                       )
 
 
 # Default primary key field type
