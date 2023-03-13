@@ -166,27 +166,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'church/static'
-]
-STATIC_ROOT = BASE_DIR / "static"
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'church/static'
+# ]
+# STATIC_ROOT = BASE_DIR / "static"
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # static media settings
-# STATIC_URL = 'https: //' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
-# MEDIA_URL = STATIC_URL + 'media/'
-# STATICFILES_DIRS = [BASE_DIR, "church/static"]
-# STATIC_ROOT = 'static'
-# MEDIA_ROOT = 'media/'
-# ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-# STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
-#                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#                        )
+STATIC_URL = 'https: //' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/'
+MEDIA_URL = STATIC_URL + 'media/'
+STATICFILES_DIRS = [BASE_DIR, "church/static"]
+STATIC_ROOT = 'static'
+MEDIA_ROOT = 'media/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder',
+                       'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+                       )
 
 
 # Default primary key field type

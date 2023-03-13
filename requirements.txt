@@ -12,7 +12,6 @@ sqlparse==0.4.2
 urllib3==1.26.11
 whitenoise==6.2.0
 gunicorn==20.1.0
-asgiref==3.6.0
 boto3==1.26.64
 botocore==1.29.89
 cached-property==1.5.1
