@@ -42,7 +42,7 @@
             <div class="hero-banner">
                 <div class="hero-banner-comps">
                     <h1>WELCOME TO PROPHET COFIE POWERMAN BEKOE MINISTRY</h1>
-                    <p>No weapon that is formed against thee shall prosper; and every tongue that shall rise agianst thee in judgement thou shalt condemn. This is the heritage of the servants of the LORD, and their righteousness is of me, saith the LORD - ISAIAH 54:17</p><br>
+                    <p>"For God so loved the world that he gave his one and only son, that whoever believes in him shall not perish but have eternal life." - JOHN 3:2</p><br>
                     <a href="{% url 'events' %}">CONNECT &rarr;</a>
                 </div>
             </div>
@@ -82,18 +82,13 @@
 
                         <div class="sermon">
                             {% for sermon in sermons %}
-                            <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
-                            </a><br>
+                            <ol>
+                                <li>
+                                    <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
+                                    </a>
+                                </li>
+                            </ol><br>
                             {% endfor %}
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
-                            </a><br>
-
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
-                            </a>
-                            <br>
-                            
-                            <a class="sermon-options fade-in" href="#"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat nostrum ab earum nulla assumenda! Quas fugit dolor saepe magni. </p>
-                            </a>
                         </div>
 
                     </div>
