@@ -1,18 +1,13 @@
-from django.contrib.syndication.views import Feed
-from django.urls import reverse
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from churchweb.models import Fruit, Events, RSVP, Gallery, RecentEvents, RandomVerse, Sermon
-from django.db.models import Sum
-from .forms import FruitForm, ContactForm
-from datetime import date
 from django.views.decorators.csrf import csrf_exempt
 
+from churchweb.models import Events, Gallery, RandomVerse, RecentEvents, RSVP, Sermon
+from .forms import ContactForm
 # Create your views here.
 
 
 def index(request):
-    events_ = Events.objects.all().filter(event_type__iexact="major")
+    events_ = Events.objects.filter(event_type__iexact="major")
     print(events_)
 
     random_verse = RandomVerse.objects.order_by("?").first()
