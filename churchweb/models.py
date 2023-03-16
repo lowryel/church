@@ -34,7 +34,7 @@ class Events(models.Model):
     name = models.CharField(max_length=256)
     event_type=models.CharField(choices=STATUS_CHOICE, max_length=120, default="N")
     event_date = models.DateField()
-    rsvp = models.ForeignKey(RSVP, on_delete=models.RESTRICT)
+    rsvp = models.ForeignKey(RSVP, on_delete=models.PROTECT)
     event_poster = models.ImageField(upload_to = "img")
     time = models.TimeField(blank=True, null=True)
     from_time = models.TimeField(blank=True, null=True)

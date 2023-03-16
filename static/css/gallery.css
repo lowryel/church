@@ -40,9 +40,14 @@
 }
 
 .top-img-block img{
-    height: 18rem;
+    height: 22rem;
     width: 100%;
     border-radius: 10px;
+
+}
+
+.top-img-block img:hover{
+    transform:scaleX(-1.2) ;
 }
 
 .top-img-block p{
@@ -62,5 +67,8 @@
     .top-img-block img {
         height: 18rem;
         width: 100%;
+    }
+    .top-img-block img{
+        height: 22rem;
     }
 }

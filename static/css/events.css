@@ -31,7 +31,7 @@ h1 h2{
 
 .recent-events-one img{
     width: 100%;
-    height: 18rem;
+    height: 22rem;
 }
 
 .option-two p{
@@ -71,6 +71,9 @@ h1 h2{
     .recent-events-one {
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .recent-events-one img{
+
     }
     .events-section {
         margin:5px;
@@ -179,6 +182,10 @@ h1 h2{
         grid-template-rows: 2fr;
         text-align: left;
         margin-bottom: 20px;
+        
+    }
+    .upcoming-event-objects img{
+        height: 400px;
     }
     .upcoming-events {
         margin: 5px;
