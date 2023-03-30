@@ -186,7 +186,7 @@ p{
 #main-body{
     margin: 10px 60px;
     padding: 10px;
-    background-color: rgb(240, 248, 248);
+    background-color: rgba(255, 255, 255, 0.932);
     scroll-behavior: smooth;
 }
 
@@ -260,6 +260,15 @@ p{
 
 .sermon iframe{
     margin: 20px 0;
+}
+.sermon ul{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.sermon li{
+    list-style-type: none !important;
 }
 
 @media screen and (max-width:600px){
@@ -413,22 +422,26 @@ p{
     gap: 20px;
 }
 
-.sermon-section{
+/* .sermon-section{
     color: #eefdfb;
     display: block;
     align-items: center;
     justify-content: center;
-}
+    height: 100%;
+} */
 
-.sermon{
+.sermon ul{
     padding: 10px;
-    margin: 8px;
+    margin: 2px;
+    display: block;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
 }
 
 .sermon p{
     background-color: #d8f3fae3;
     padding: 10px;
-    /* font-family: "TT-Firs-Neue-Trial-Medium"; */
     font-family: "TT-Firs-Neue-Trial-Medium";
 }
 

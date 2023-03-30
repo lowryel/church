@@ -1,22 +1,22 @@
-from datetime import datetime
+# from datetime import datetime
 # print(datetime.strftime("%A %d, %B %Y"))
-from datetime import date
-import time
+# from datetime import date
+# import time
 # import asyncio
 # import uuid
 # id = uuid.uuid4()
 # print(id)
-list1 = ["name","age","worth"]
-list2 = ["Eugene",29,250000]
-list3 = dict(zip(list1, list2))
+# list1 = ["name","age","worth"]
+# list2 = ["Eugene",29,250000]
+# list3 = dict(zip(list1, list2))
 
-print(list3.items())
-print(time.sleep(3))
-print(list(list3.keys()))
-print(list(list3.values()))
-print(len(list3))
+# print(list3.items())
+# print(time.sleep(3))
+# print(list(list3.keys()))
+# print(list(list3.values()))
+# print(len(list3))
 
-iterate = iter(list3)
+# iterate = iter(list3)
 # for (k,v) in iterate:
 #     print(zip(k,v))
 
@@ -85,8 +85,8 @@ print("=====================================================")
 # This function uses a for loop to iterate through the desired range of numbers, starting with the 2nd number in the sequence(1) up to the nth number.
 # You can also change the range in the for loop to get more or less numbers.
 
-print(ord('A'))
-for i in range(65,91):
-    print(chr(i),i)
+# print(ord('A'))
+# for i in range(65,91):
+#     print(chr(i),i)
 
 

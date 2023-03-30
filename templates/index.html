@@ -73,7 +73,7 @@
 
                     <div class="sermon-section lazy fade-in">
                         <div class="sermon">
-                            <iframe src="{% static 'img/managing-God-resources.mp4' %}" alt="sermon thumbnail" srcset=""frameborder='0' height='320px' width='100%' scrolling='no' src='http://currentlyobsessed.me/api/v1/get_widget?wid=30&blog=Brighton+The+Day&widgetid=38585' frameborder="0" autoplay="True" allowfullscreen></iframe>
+                            <iframe src="{% static 'img/managing-God-resources.mp4' %}" alt="sermon thumbnail" srcset=""frameborder='0' height='320px' width='100%' scrolling='no' src='http://currentlyobsessed.me/api/v1/get_widget?wid=30&blog=Brighton+The+Day&widgetid=38585' autoplay="True" allowfullscreen></iframe>
                             
                         </div>
                     </div>
@@ -82,12 +82,12 @@
 
                         <div class="sermon">
                             {% for sermon in sermons %}
-                            <ol>
+                            <ul>
                                 <li>
                                     <a class="sermon-options fade-in" href="{{sermon.youtube_link}}" target="blank"><p>{{sermon.title}}</p>
                                     </a>
                                 </li>
-                            </ol><br>
+                            </ul><br>
                             {% endfor %}
                         </div>
 
