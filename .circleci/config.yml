@@ -1,8 +1,8 @@
 
 version: 2.1
 
-orbs:
-  python: circleci/python@1.5.0
+# orbs:
+#   python: circleci/python@1.5.0
 
 # Define a job to be invoked later in a workflow.
 
