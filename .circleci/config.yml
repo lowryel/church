@@ -14,10 +14,10 @@ jobs:
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     steps:
       - checkout
-      # - run:
-      #     name: upgrade pip
-      #     command: |
-      #       pip install --upgrade pip
+      - run:
+          name: upgrade pip
+          command: |
+            pip install --upgrade pip
 
       - python/install-packages:
           pkg-manager: pip
@@ -27,7 +27,7 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: |
-            python manage.py test
+            python manage.py churchweb/test
 
       - store_test_results: 
           path: /test.txt
