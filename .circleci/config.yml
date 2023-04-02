@@ -35,7 +35,7 @@ jobs:
       - run:
           name: collect staticfiles 
           # This assumes pytest is installed via the install-package step above
-          command: python manage.py collectstatic
+          command: python manage.py collectstatic --no-input
 
 # Invoke jobs via workflows
 workflows:
