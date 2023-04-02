@@ -9,7 +9,7 @@ orbs:
 jobs:
   build-and-test: 
     docker:
-      - image: python:3.10.2
+      - image: python:3.8.3
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     steps:
