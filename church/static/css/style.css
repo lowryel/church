@@ -119,6 +119,7 @@ p{
 
 .hero-banner-comps p{
     font-family: "TT-Firs-Neue-Trial-Medium";
+    color: rgb(255, 247, 247);
 }
 
 .hero-banner-comps a:hover {
@@ -259,14 +260,9 @@ p{
 }
 
 .sermon iframe{
-    margin: 20px 0;
+    margin: -10px 0;
 }
-.sermon ul{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-}
+
 .sermon li{
     list-style-type: none !important;
 }
@@ -282,8 +278,8 @@ p{
     }
     .hero-banner p{
         padding: 12px 50px;
-        color: rgb(0, 0, 0);
-        background-color: #fbfdff80;
+        
+        background-color: #fbfdff3d;
     }
 
     .sermon iframe{
@@ -422,16 +418,8 @@ p{
     gap: 20px;
 }
 
-/* .sermon-section{
-    color: #eefdfb;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-} */
 
 .sermon ul{
-    padding: 10px;
     margin: 2px;
     display: block;
     justify-content: center;

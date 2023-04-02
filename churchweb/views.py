@@ -3,15 +3,16 @@ from django.views.decorators.csrf import csrf_exempt
 
 from churchweb.models import Events, Gallery, RandomVerse, RecentEvents, RSVP, Sermon
 from .forms import ContactForm
+from django.http import HttpResponse
 # Create your views here.
 
 
 def index(request):
     events_ = Events.objects.filter(event_type__iexact="major")
-    print(events_)
+
 
     random_verse = RandomVerse.objects.order_by("?").first()
-    sermons = Sermon.objects.all()
+    sermons = Sermon.objects.all()[:5]
 
     context = {
         'events':events_,
@@ -74,3 +75,15 @@ def rsvpView(request, pk):
     }
     return render(request, 'rsvp-popup.html', context)
 
+
+from django.core.signing import Signer, TimestampSigner
+from datetime import timedelta
+import logging
+def signa(request):
+    # logger = logging.dictConfig(__name__)
+    # signer = TimestampSigner()
+    # value = signer.sign("Hello")
+    # unsign = logger.info(signer.unsign(value, max_age=timedelta(5)))
+    # return unsign
+    # print(value)
+    return HttpResponse("Hello There")

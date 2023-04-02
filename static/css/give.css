@@ -3,7 +3,7 @@
     background-position: center;
     background-size: cover;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     font-size: 28px;
 }
