@@ -27,7 +27,7 @@ jobs:
           # This assumes pytest is installed via the install-package step above
           command: |
             pip install -r requirements.txt
-            python manage.py churchweb/test
+            python manage.py test
 
       - store_test_results: 
           path: /test.txt
