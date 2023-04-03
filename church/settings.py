@@ -78,8 +78,8 @@ STORAGES = {
 }
 
 
-CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/",
-                        "https://church-production.up.railway.app/*"]
+CSRF_TRUSTED_ORIGINS = ["https://cbekoe.up.railway.app/",
+                        "https://cbekoe.up.railway.app/*"]
 
 
 

@@ -40,11 +40,10 @@
 }
 
 .top-img-block img{
-    /* height: 20rem; */
     width: 100%;
     border-radius: 10px;
     object-fit: contain;
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
 }
 
 .top-img-block img:hover{

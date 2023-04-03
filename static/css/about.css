@@ -19,7 +19,6 @@
     display: grid;
     grid-template-columns:1fr 1fr;
     gap: 10px;
-    background: url("/static/img/color-center.webp");
     text-align: center;
 }
 .our-leaders img{
