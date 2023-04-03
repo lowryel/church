@@ -31,8 +31,8 @@
 }
 
 .main-gallery p{
-    /* font-family: "Poppins"; */
-    font-family: "Popins";
+    font-family: "TT-Firs-Neue-Trial-Medium";
+    text-align: center;
 }
 
 .top-img-block{
@@ -43,7 +43,6 @@
     height: 20rem;
     width: 100%;
     border-radius: 10px;
-
 }
 
 .top-img-block img:hover{
@@ -65,10 +64,7 @@
         width: 100%;
     }
     .top-img-block img {
-        height: 18rem;
+        height: 15rem;
         width: 100%;
-    }
-    .top-img-block img{
-        height: 22rem;
     }
 }
