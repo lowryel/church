@@ -11,26 +11,15 @@
                 <h1>RECENT EVENTS</h1>
                 <div class="recent-events-session">
                     {% for event_ in recents %}
-                    {% if event_ %}
                     <div class="recent-events-one">
                         <img class="fade-in" src="{{event_.image.url}}" alt="event image left">
                         <div class="option-two fade-in">
-                            <h1>{{event_.event.name}}</h1>
-                            <p>{{event_.event_details }}</p> 
+                            <h1>{{ event_.event.name }}</h1>
+                            <p>{{ event_.event_details }}</p> 
                             <!-- |truncatewords:60 -->
                             <a href="#">Details &rarr;</a>
                         </div>
-                    </div>
-                    {% else %}
-                    <div class="recent-events-one">
-                        <div class="option-two fade-in">
-                            <h2>Midweek Service</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quisquam officiis, quaerat soluta necessitatibus impedit, explicabo, animi repellendus cumque dicta iste sequi in! Non quam necessitatibus ad corporis labore facere quasi accusamus maxime, cumque dolore ducimus hic reiciendis! Est soluta necessitatibus sequi molestiae molestias labore itaque possimus culpa consequuntur praesentium commodi facilis ut omnis delectus veritatis libero odit tempore distinctio, adipisci aperiam magni consectetur! Dolorem nesciunt assumenda error quam cum alias delectus provident laboriosam? Architecto ut rem rerum natus quos! Animi, modi quo. Harum labore sequi qui tempora possimus officiis? Eius suscipit blanditiis quibusdam repellat laborum ipsum esse deleniti nam error? Modi rem labore, sapiente quaerat dignissimos eos id sit, aliquid aperiam odio sunt enim error nisi. Id, veritatis nostrum?</p>
-                            <a href="#">Details &rarr;</a>
-                        </div>
-                        <img class="fade-in" src="{% static './img/prayerfulsmile.jpg' %}" alt="event-image-right">
-                    </div>  
-                    {% endif %}            
+                    </div>            
                     {% endfor %}
                 </div>
                 <h1>UPCOMING EVENTS</h1>
@@ -40,8 +29,8 @@
                     <div class="upcoming-event-objects fade-in">
                         <img src="{{event.event_poster.url}}" alt="event-three">
                         <div>
-                            <h2>{{event.event_date|date:"jS"}}</h2>
-                            <p style="text-transform:capitalize;">{{event.event_date|date:"F"}}</p>
+                            <h2>{{ event.event_date|date:"jS" }}</h2>
+                            <p style="text-transform:capitalize;">{{ event.event_date|date:"F" }}</p>
                         </div>
                             <h2>{{ event.name|upper }}</h2>
                             <a href="{% url 'rsvp' event.pk %}">RSVP</a>
