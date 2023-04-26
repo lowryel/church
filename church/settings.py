@@ -28,10 +28,10 @@ SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'cbekoe.up.railway.app',
-                 'www.cbekoe.up.railway.app', '0.0.0.0']
+                 'www.cbekoe.up.railway.app']
 
 
 # Application definition
@@ -72,11 +72,11 @@ AWS_QUERYSTRING_AUTH = False # This will make sure that the file URL does not ha
 # AWS_S3_CUSTOM_DOMAIN = AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com'
 
 
-STORAGES = {
-    "static": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     "static": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
 
 
 CSRF_TRUSTED_ORIGINS = ["https://cbekoe.up.railway.app/",
@@ -168,7 +168,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' #/home/lowry/Backend/church-project/church
 STATICFILES_DIRS = [
     BASE_DIR / 'church/static'
 ]
