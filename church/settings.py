@@ -12,19 +12,23 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env(  # <-- Updated!
+    # set casting, default value
+    DEBUG=(bool, False),
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# Take environment variables from .env file
+environ.Env.read_env(BASE_DIR / '.env')  # <-- Updated!
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy"
-
-
-
+SECRET_KEY = env("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -81,7 +85,6 @@ AWS_QUERYSTRING_AUTH = False # This will make sure that the file URL does not ha
 
 CSRF_TRUSTED_ORIGINS = ["https://cbekoe.up.railway.app/",
                         "https://cbekoe.up.railway.app/*"]
-
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -168,12 +171,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/' #/home/lowry/Backend/church-project/church
+STATIC_URL = '/static/' #'/home/lowry/Backend/church-project/church/' #
 STATICFILES_DIRS = [
     BASE_DIR / 'church/static'
 ]
 STATIC_ROOT = BASE_DIR / "static"
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -194,5 +196,3 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-

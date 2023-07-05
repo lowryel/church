@@ -8,13 +8,6 @@ from django.conf import settings
 
 # Create your models here.
 
-class Fruit(models.Model):
-    name = models.CharField(max_length=100, null=True, blank=True)
-    price = models.IntegerField()
-
-    def __str__(self):
-        return self.name
-
 class RSVP(models.Model):
     rs_vp = models.CharField(max_length=120)
     designation = models.CharField(max_length=120, blank=True, null=True)
