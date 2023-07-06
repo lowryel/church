@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from django.core.mail import send_mail
 from django.utils.translation import gettext_lazy as _
@@ -34,7 +34,7 @@ class Events(models.Model):
     to_time = models.TimeField(blank=True, null=True)
 
     venue = models.CharField(max_length=256)
-    status = models.BooleanField(default=False)
+    status = models.BooleanField(default=True)
 
     class Meta:
         verbose_name = _("Event")
@@ -52,9 +52,9 @@ class Sermon(models.Model):
 
 class RecentEvents(models.Model):
     event = models.ForeignKey(Events, on_delete=models.CASCADE)
-    event_details = models.TextField()
-    image = models.ImageField(upload_to = "img")
+    event_details = models.TextField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = _("Recent Event")
@@ -62,6 +62,13 @@ class RecentEvents(models.Model):
 
     def __str__(self):
         return self.event.name
+
+def create_recent_events(sender, instance, *args, **kwargs):
+    if instance.status==False:
+        RecentEvents.objects.create(event=instance)
+
+pre_save.connect(create_recent_events, sender=Events)
+
 
 defaultVerse = "I and my father are one - John 10:30"
 class RandomVerse(models.Model):
@@ -91,7 +98,7 @@ class Gallery(models.Model):
         verbose_name_plural = _("Gallery")
 
     def __str__(self):
-        return "media"
+        return self.caption 
 
 
 # @receiver(post_save, sender=ContactUs, created)

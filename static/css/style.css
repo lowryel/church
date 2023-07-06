@@ -7,6 +7,13 @@
 }
 
 
+/* @font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff2') format('woff2'),
+       url('myfont.woff') format('woff'),
+       url('myfont.ttf') format('truetype');
+} */
+
 *{
     margin: 0;
     padding: 0;
@@ -14,12 +21,12 @@
 }
 
 #main-body{
-    font-family: "TT-Firs-Neue-Trial-Medium";
+    font-family: "TT-Firs-Neue-Trial-Medium", sans-serif;
 }
 
 body{
     width: 100%;
-    font-family: 'TT-Firs-Neue-Trial-Medium';
+    font-family: 'TT-Firs-Neue-Trial-Medium', sans-serif;
 }
 
 p{
@@ -68,7 +75,7 @@ p{
 }
 
 .hero-banner{
-    background: url(/static/img/hero-banner-img.jpg) no-repeat;
+    background: url(/static/img/hero-banner.jpg) no-repeat;
     background-size: cover;
     height: 80vh;
     position: center;

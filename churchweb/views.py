@@ -9,8 +9,6 @@ from django.http import HttpResponse
 
 def index(request):
     events_ = Events.objects.filter(event_type__iexact="major")
-
-
     random_verse = RandomVerse.objects.order_by("?").first()
     sermons = Sermon.objects.all()[:5]
 
@@ -49,8 +47,7 @@ def gallery(request):
 
 
 def events(request):
-    rsvp = RSVP.objects.all()
-    events_ = Events.objects.filter(status=False).order_by("-event_date")
+    events_ = Events.objects.filter(status=True).order_by("-event_date")
 
     recents = RecentEvents.objects.all().order_by("-date")[:2]
     context = {
@@ -68,24 +65,8 @@ def give(request):
 
 def rsvpView(request, pk):
     events_ = Events.objects.get(pk=pk)
-    print(events_.id)
-
     context={
         'event': events_,
     }
     return render(request, 'rsvp-popup.html', context)
-
-
-from django.core.signing import Signer, TimestampSigner
-from datetime import timedelta
-import logging
-def signa(request):
-    # logger = logging.dictConfig(__name__)
-    # signer = TimestampSigner()
-    # value = signer.sign("Hello")
-    # unsign = logger.info(signer.unsign(value, max_age=timedelta(5)))
-    # return unsign
-    # print(value)
-    return HttpResponse("Hello There")
-
 

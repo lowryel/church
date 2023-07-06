@@ -3,7 +3,6 @@ from churchweb.models import Events, RSVP, ContactUs, RecentEvents, Gallery, Ran
 
 # Register your models here.
 
-# admin.site.register(Fruit)
 
 class EventsAdmin(admin.ModelAdmin):
     list_display = ['name', 'event_date', 'venue', 'status']

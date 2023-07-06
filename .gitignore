@@ -1,4 +1,5 @@
 async.py
 file.txt
 custom.py
+db.sqlite3
 .env

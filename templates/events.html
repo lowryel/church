@@ -12,7 +12,7 @@
                 <div class="recent-events-session">
                     {% for event_ in recents %}
                     <div class="recent-events-one">
-                        <img class="fade-in" src="{{event_.image.url}}" alt="event image left">
+                        <img class="fade-in" src="{{event_.event.event_poster.url}}" alt="event image left">
                         <div class="option-two fade-in">
                             <h1>{{ event_.event.name }}</h1>
                             <p>{{ event_.event_details }}</p> 
