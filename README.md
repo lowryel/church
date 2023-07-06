@@ -41,8 +41,7 @@ DEFAULT_FILE_STORAGE = 'church.storage_backend.MediaStorage'
             "http://localhost:8000"
         ],
         "ExposeHeaders": []
-    }
-]
+    },
     {
         "AllowedHeaders": [
             "*"
