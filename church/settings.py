@@ -15,7 +15,7 @@ environ.Env.read_env(BASE_DIR / '.env')  # <-- Updated!
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
