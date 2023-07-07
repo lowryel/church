@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure-gij&guvfg$i+res@p%t3^b#&z_)sbyd3nzuz1x-km!cc_k(doy
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '*']
 
@@ -141,8 +141,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'church/static'),
 ]
 
-AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID = '${{AWS_ACCESS_KEY_ID}}'
+AWS_SECRET_ACCESS_KEY = '${{AWS_SECRET_ACCESS_KEY}}'
 AWS_STORAGE_BUCKET_NAME = 'bekoe-artifact'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
