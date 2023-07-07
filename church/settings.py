@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 
 
-CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app/"]
+CSRF_TRUSTED_ORIGINS = ["https://church-production.up.railway.app"]
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
