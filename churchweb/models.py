@@ -98,7 +98,7 @@ class Gallery(models.Model):
         verbose_name_plural = _("Gallery")
 
     def __str__(self):
-        return self.id
+        return f'{self.caption} - {self.date_posted.strftime("%d/%m/%Y %H:%M")}'
 
 
 # @receiver(post_save, sender=ContactUs, created)
